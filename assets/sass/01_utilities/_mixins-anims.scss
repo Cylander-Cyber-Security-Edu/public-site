@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Delay
+--------------------------------------------------------------*/
+@mixin delay-animation($element: div, $number: 4, $horizontal: true, $side: 4rem, $delay: 400ms, $time: 600ms) {
+   &.is-animate {
+      #{$element} {
+         animation: fade-in $time cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+      }
+   }
+
+   #{$element} {
+      opacity: 0;
+
+      @if $horizontal {
+         @keyframes fade-in {
+            from {
+               transform: translate3d($side, 0, 0);
+            }
+            to {
+               opacity: 1;
+               transform: translate3d(0, 0, 0);
+            }
+         }
+      } @else {
+         @keyframes fade-in {
+            from {
+               transform: translate3d(0, $side, 0);
+            }
+            to {
+               opacity: 1;
+               transform: translate3d(0, 0, 0);
+            }
+         }
+      }
+   }
+
+   @for $i from 1 through $number {
+      #{$element} {
+         &:nth-child(#{$i}) {
+            animation-delay: $i * $delay - $delay;
+         }
+      }
+   }
+}
+
+/*--------------------------------------------------------------
+# Appear
+--------------------------------------------------------------*/
+@mixin appear-animation($side: 8rem, $horizontal: true, $time: 600ms) {
+   opacity: 0;
+   transform-origin: center left;
+   transition: transform $time cubic-bezier(0.215, 0.61, 0.355, 1),
+      opacity $time * 2 cubic-bezier(0.215, 0.61, 0.355, 1);
+
+   @if $horizontal {
+      transform: translate3d($side, 0, 0);
+   } @else {
+      transform: translate3d(0, $side, 0);
+   }
+
+   &.is-animate {
+      opacity: 1;
+      transform: none;
+   }
+}

@@ -1,0 +1,425 @@
+/* TYPOGRAPHY
+--------------------------------------------------------------*/
+// Basics
+// Headings
+// List
+// Blockquote
+// WYSIWYG
+// Other
+
+// -------------------------------------------------------------
+// Basics
+// -------------------------------------------------------------
+
+b,
+strong {
+	font-weight: 700;
+}
+
+dfn,
+em,
+cite {
+	font-style: italic;
+}
+
+p {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+
+	&:not(:last-of-type) {
+		@include margin-bottom($min-m-p, $max-m-p);
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+
+		+ ul,
+		+ ol,
+		+ blockquote {
+			margin-top: 2rem;
+		}
+	}
+
+	+ h1,
+	+ .h1,
+	+ h2,
+	+ .h2,
+	+ h3,
+	+ .h3,
+	+ h4,
+	+ .h4,
+	+ h5,
+	+ .h5,
+	+ h6,
+	+ .h6 {
+		padding-top: 2rem;
+	}
+
+	+ p .btn,
+	+ p .readmore {
+		$factor-button: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-button - $min-button);
+		$calc-value-button: unquote("#{$min-button - ( $screen-min-xxs * $factor-button)} + #{ 100vw * $factor-button}");
+		$final-value-button: (
+			#{clamp(
+					#{if($min-button > $max-button, $max-button, $min-button)},
+					#{$calc-value-button},
+					#{if($min-button > $max-button, $min-button, $max-button)}
+				)}
+		);
+		$factor-p: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-m-p - $min-m-p);
+		$calc-value-p: unquote("#{$min-m-p - ( $screen-min-xxs * $factor-p)} + #{ 100vw * $factor-p}");
+		$final-value-p: (
+			#{clamp(
+					#{if($min-m-p > $max-m-p, $max-m-p, $min-m-p)},
+					#{$calc-value-p},
+					#{if($min-m-p > $max-m-p, $min-m-p, $max-m-p)}
+				)}
+		);
+		margin-top: calc(#{$min-button} - #{$min-m-p}); // Fallback for older browsers
+		margin-top: calc(#{$final-value-button} - #{$final-value-p});
+	}
+}
+
+.text,
+.page-content .content {
+	p:last-of-type {
+		+ ul,
+		+ ol,
+		+ blockquote {
+			margin-top: 2rem;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Headings
+// -------------------------------------------------------------
+// Styles are in mixins-typography
+
+h1,
+.h1,
+h2,
+.h2{
+	@include margin-title(2rem,4rem);
+}
+
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+	@include margin-title();
+}
+
+h1,
+.h1 {
+	@include h1();
+}
+
+h2,
+.h2 {
+	@include h2();
+}
+
+h3,
+.h3 {
+	@include h3();
+}
+
+h4,
+.h4 {
+	@include h4();
+}
+
+h5,
+.h5 {
+	@include h5();
+}
+
+h6,
+.h6 {
+	@include h6();
+}
+
+// -------------------------------------------------------------
+// List
+// -------------------------------------------------------------
+
+ul,
+ol {
+	@include reset-list();
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+ul li {
+	list-style: disc;
+}
+
+ol li {
+	list-style: decimal;
+}
+
+.text,
+.page-content .content {
+	ul,
+	ol {
+		@include reset-list();
+		//padding-left: 2rem;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+
+		ol,
+		ul {
+			margin-top: 1rem;
+			margin-bottom: 0.5rem;
+			padding-left: 0;
+		}
+
+		+ h1,
+		+ .h1,
+		+ h2,
+		+ .h2,
+		+ h3,
+		+ .h3,
+		+ h4,
+		+ .h4,
+		+ h5,
+		+ .h5,
+		+ h6,
+		+ .h6 {
+			padding-top: 2rem;
+		}
+
+		+ p > .readmore,
+		+ p > .btn,
+		+ p > .classic-btn {
+			margin-top: 1rem;
+		}
+
+		li {
+			position: relative;
+
+			&:before {
+				position: absolute;
+				left: 0;
+			}
+
+			+ li {
+				margin-top: 2rem;
+			}
+		}
+	}
+
+	ul {
+		li {
+			padding-left: 2rem;
+
+			&:before {
+				@include icon-svg("a",$primary,1.4rem);
+				font-weight: bold;
+				top: 0.5rem;
+				left: -0.5rem;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: counter;
+
+		li {
+			counter-increment: counter;
+			padding-left: 3rem;
+
+			&:before {
+				content: counter(counter) ". ";
+				line-height: $line-height;
+				font-weight: bold;
+				color: $primary;
+			}
+		}
+	}
+
+	ul + ol,
+	ol + ul {
+		margin-top: 2rem;
+	}
+}
+
+// -------------------------------------------------------------
+// WYSIWYG
+// -------------------------------------------------------------
+.text,
+.page-content .content,
+.inner-flex-block-text {
+	// - IMG in Wysiwyg
+	// -------------------------------------------------------------
+	p img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	// - BTN in Wysiwyg
+	// -------------------------------------------------------------
+
+	[style~="center;"] {
+		.btn,
+		.readmore {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	[style~="right;"] {
+		.btn,
+		.readmore {
+			margin-left: auto;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Blockquote
+// -------------------------------------------------------------
+
+blockquote {
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 2rem;
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 1fr;
+
+	&:before {
+		content: "“";
+		display: block;
+		line-height: 1;
+		font-weight: 900;
+		color: $primary;
+		margin-right: 1rem;
+		@include fluid-type(3rem, 4rem);
+	}
+
+	*:not(:first-child) {
+		grid-area: auto / 2 / auto / 3;
+	}
+
+	figcaption {
+		margin-top: 2rem;
+		font-weight: 700;
+	}
+
+	cite {
+		font-style: normal;
+	}
+
+	+ h1,
+	+ .h1,
+	+ h2,
+	+ .h2,
+	+ h3,
+	+ .h3,
+	+ h4,
+	+ .h4,
+	+ h5,
+	+ .h5,
+	+ h6,
+	+ .h6 {
+		padding-top: 2rem;
+	}
+}
+
+// -------------------------------------------------------------
+// Other
+// -------------------------------------------------------------
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+pre {
+	background: #eee;
+	font-family: $font-body;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var,
+samp {
+	font-family: $font-body;
+	font-size: 1.5rem;
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+abbr,
+acronym {
+	// border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted $bd-light-gray;
+	cursor: help;
+}
+
+mark,
+ins {
+	// background: #fff9c0;
+	background: $primary;
+	text-decoration: none;
+}
+
+address {
+	font-style: normal;
+
+	p {
+		margin: 0;
+	}
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+time{
+	display: block;
+	color: $secondary;
+	letter-spacing: 2px;
+	font-size: 1.6rem;
+	margin-bottom: 1.5rem;
+	font-family: $font-body;
+	font-weight: 300;
+	line-height: 1;
+}

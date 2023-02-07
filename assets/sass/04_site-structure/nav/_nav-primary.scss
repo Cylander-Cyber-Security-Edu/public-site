@@ -1,0 +1,113 @@
+/* Primary navigation
+--------------------------------------------------------------*/
+// Nav container
+// Primary nav
+// - Level 1
+
+// -------------------------------------------------------------
+// Nav container
+// -------------------------------------------------------------
+#site-navigation {
+	// @include transition-base();
+	display: flex;
+	align-items: center;
+
+	#main-menu-toggle-wrapper .inner-toggle {
+		
+		@media (min-width: $screen-lg) {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-end;
+		    justify-content: flex-end;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Primary nav
+// -------------------------------------------------------------
+
+// - Level 1
+// -------------------------------------------------------------
+#site-navigation .primary-menu {
+	@include reset-list();
+
+	@media (max-width: $screen-sm-max) {
+		padding-top: 2rem;
+	}
+
+	@media (max-width: $screen-md-max) {
+		padding-bottom: 6rem;
+	}
+
+	@media (min-width: $screen-lg) {
+		display: flex;
+	}
+
+	> li {
+		position: relative;
+
+		@media (max-width: $screen-md-max) {
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		@media (min-width: $screen-lg) {
+			&:not(:last-child) {
+				@include margin-right($min-small-s, $max-small-s);
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					// Show level 2
+					> .sub-menu-wrapper {
+						padding-top: 3rem;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				> a {
+					color: $link-hover;
+				}
+			}
+		}
+
+		> a {
+			display: table;
+			color: $title;
+			font-family: $font-link;
+			font-weight: bold;
+
+			@media (max-width: $screen-md-max) {
+				margin-left: auto;
+				margin-right: auto;
+				font-size: $nav-mobile;
+			}
+
+			@media (min-width: $screen-lg) {
+				display: block;
+				font-size: $nav-desktop;
+				@include transition-base(250ms, color);
+			}
+		}
+
+		// Comment if you are menu with one page (anchor)
+		&.current-menu-item,
+		&.current-menu-ancestor,
+		&.current-menu-parent {
+			> a {
+				color: $link-color;
+			}
+
+			> .sub-menu-wrapper {
+				padding-top: 3rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,660 @@
+@import "mixins-typography.scss";
+@import "mixins-anims.scss";
+@import "mixins-buttons.scss";
+@import "mixins-spacing.scss";
+
+
+/*--------------------------------------------------------------
+# Logo Client
+--------------------------------------------------------------*/
+@mixin logo-size($where: header) {
+	@if $where == header {
+		@media (max-width: $screen-xxs-max) {
+			width: $logo-width;
+			height: $logo-height;
+		}
+
+		@media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
+			width: $xs-logo-width;
+			height: $xs-logo-height;
+		}
+
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+			width: $sm-logo-width;
+			height: $sm-logo-height;
+		}
+
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			width: $md-logo-width;
+			height: $md-logo-height;
+		}
+
+		@media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+			width: $lg-logo-width;
+			height: $lg-logo-height;
+		}
+
+		@media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
+			width: $xl-logo-width;
+			height: $xl-logo-height;
+		}
+
+		@media (min-width: $screen-xxl) and (max-width: $screen-xxl-max) {
+			width: $xxl-logo-width;
+			height: $xxl-logo-height;
+		}
+
+		@media (min-width: $screen-xxxl) {
+			width: $xxxl-logo-width;
+			height: $xxxl-logo-height;
+		}
+	} @else if $where == footer {
+		width: $footer-logo-width;
+		height: $footer-logo-height;
+	}
+}
+
+@mixin logo($name, $where: header) {
+	display: block;
+	@include text-hide();
+	@include logo-size($where);
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0;
+	background: transparent url("img/logo-#{$name}.svg") 0 0 no-repeat;
+	background-size: 100%;
+}
+
+/*--------------------------------------------------------------
+# Logo Globule
+--------------------------------------------------------------*/
+@mixin madebyglobule($logo: footer-logo-globule, $logo-hover: footer-love-globule) {
+	@include transition-base();
+	@include text-hide();
+	display: block;
+	background: transparent url("img/#{$logo}.svg") 0 0 no-repeat;
+	background-size: 6.6rem 1.8rem;
+	width: 6.6rem;
+	height: 1.8rem;
+
+	@media (hover: hover) {
+		&:hover {
+			background: transparent url("img/#{$logo-hover}.svg") 0 0 no-repeat;
+			background-size: 6.6rem 1.8rem;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Transitions
+--------------------------------------------------------------*/
+@mixin transition-base($time: 250ms, $property: all) {
+	transition: $property $time cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/*--------------------------------------------------------------
+# Box Shadow
+--------------------------------------------------------------*/
+$s1: (0 0.5rem 2rem 0 rgba(0, 0, 0, 0.05)) !default;
+$s2: (0 1rem 2rem 0 rgba(0, 0, 0, 0.1)) !default;
+
+$levels: () !default;
+$levels: (
+	1: $s1,
+	2: $s2,
+) !default;
+
+@mixin box-shadow($levels: $s1, $inset: false) {
+	@if $inset {
+		box-shadow: inset $levels;
+	} @else {
+		box-shadow: $levels;
+	}
+}
+
+/*--------------------------------------------------------------
+# Reset List
+--------------------------------------------------------------*/
+@mixin reset-list() {
+	margin: 0;
+	padding: 0;
+
+	> li {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+}
+
+/*--------------------------------------------------------------
+# Text Hide
+--------------------------------------------------------------*/
+@mixin text-hide() {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+/*--------------------------------------------------------------
+# Icomoon
+--------------------------------------------------------------*/
+@mixin icon-svg($content: "a", $color: $primary, $size: 2rem) {
+	font-family: $icons;
+	content: $content;
+	color: $color;
+	display: block;
+	line-height: 1;
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+
+	@if $size {
+		font-size: $size;
+	}
+}
+
+/*--------------------------------------------------------------
+# Object fit
+--------------------------------------------------------------*/
+@mixin object-fit($fill: cover, $height: 100%, $width: 100%) {
+	height: $height;
+	width: $width;
+	object-fit: $fill;
+	object-position: center;
+}
+
+/*--------------------------------------------------------------
+# Responsive Typography
+--------------------------------------------------------------*/
+
+@mixin fluid-type($min-value: $min-font, $max-value: $max-font, $min-vw: $screen-min-xxs, $max-vw: $screen-max-xxxl) {
+	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+	$calc-value: unquote("#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }");
+
+	font-size: $min-value; // Fallback for older browsers
+	font-size: clamp(
+		#{if($min-value > $max-value, $max-value, $min-value)},
+		#{$calc-value},
+		#{if($min-value > $max-value, $min-value, $max-value)}
+	);
+}
+
+/*--------------------------------------------------------------
+# Responsive Space
+--------------------------------------------------------------*/
+
+@mixin fluid-space(
+	$value: margin,
+	$direction: null,
+	$min-value: $min-small-s,
+	$max-value: $max-small-s,
+	$min-vw: $screen-min-xxs,
+	$max-vw: $screen-max-xxxl
+) {
+	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+	$calc-value: unquote("#{$min-value - ($min-vw * $factor)} + #{100vw * $factor}");
+
+	@if $direction == null {
+		#{$value}: $min-value; // Fallback for older browsers
+		#{$value}: clamp(
+			#{if($min-value > $max-value, $max-value, $min-value)},
+			#{$calc-value},
+			#{if($min-value > $max-value, $min-value, $max-value)}
+		);
+	}
+
+	@if $direction != null {
+		#{$value}-#{$direction}: $min-value; // Fallback for older browsers
+		#{$value}-#{$direction}: clamp(
+			#{if($min-value > $max-value, $max-value, $min-value)},
+			#{$calc-value},
+			#{if($min-value > $max-value, $min-value, $max-value)}
+		);
+	}
+}
+
+/*--------------------------------------------------------------
+# Placeholders
+--------------------------------------------------------------*/
+@mixin placeholder($color: $txt, $opacity: 0.5, $size: 1.6rem, $f-family: $font-body) {
+	/* - Chrome ≤56, Safari 5-10.0, iOS Safari 4.2-10.2, Opera 15-43, Opera Mobile 12-12.1, Android Browser 2.1-4.4.4, Samsung Internet ≤6.2, QQ Browser */
+	::-webkit-input-placeholder {
+		color: $color;
+		opacity: $opacity;
+		font-family: $f-family;
+	}
+
+	/* Firefox 4-18 */
+	:-moz-placeholder {
+		color: $color;
+		opacity: $opacity;
+		font-family: $f-family;
+	}
+
+	/* Firefox 19-50 */
+	::-moz-placeholder {
+		color: $color;
+		opacity: $opacity;
+		font-family: $f-family;
+	}
+
+	/* - IE 10–11, IE Mobile 10-11 */
+	:-ms-input-placeholder {
+		color: $color !important;
+		font-size: $size !important;
+		font-family: $f-family !important;
+		opacity: $opacity !important;
+	}
+
+	/* Edge (also supports ::-webkit-input-placeholder) */
+	::-ms-input-placeholder {
+		color: $color;
+		opacity: $opacity;
+		font-family: $f-family;
+	}
+
+	/* CSS Pseudo-Elements Level 4 Editor's Draft
+	- Browsers not mentioned in vendor prefixes
+	- Browser of newer versions than mentioned in vendor prefixes */
+	::placeholder {
+		color: $color;
+		opacity: $opacity;
+		font-family: $f-family;
+	}
+
+	// ::ms-value is a Microsoft extension (inout, textarea, select)
+	::-ms-value {
+		font-size: $size;
+		color: $color;
+		opacity: $opacity;
+		font-family: $f-family;
+	}
+}
+
+/*--------------------------------------------------------------
+# Social media
+--------------------------------------------------------------*/
+@mixin social-media($color: $title, $font-size: 1.5rem) {
+	$socialIcons: "facebook" "F" $font-size $facebook, "twitter" "T" $font-size $twitter,
+		"linkedin" "L" $font-size $linkedin, "youtube" "Y" $font-size $youtube, "instagram" "I" $font-size $instagram,
+		"vimeo" "V" $font-size $vimeo, "messenger" "M" $font-size $messenger, "whatsapp" "W" $font-size $whatsapp,
+		"tiktok" "K" $font-size $tiktok, "email" "E" $font-size $link-hover;
+
+	@each $name, $glyph, $size, $color-hover in $socialIcons {
+		&.#{$name} a {
+			@include text-hide();
+			display: block;
+
+			&:before {
+				@include icon-svg($glyph, $color, $size);
+				@include transition-base();
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					&:before {
+						color: $color-hover;
+					}
+				}
+			}
+
+			&:focus,
+			&:active {
+				&:before {
+					color: $color-hover;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Background image
+--------------------------------------------------------------*/
+
+// - FIT
+@mixin fit-img-size($img-min: $min-img-min-height, $img-max: $max-img-min-height) {
+	height: $img-min; // Fallback for older browsers
+	@include fluid-space(height, null, $img-min, $img-max);
+}
+
+// - BG
+@mixin bg-img-size($img-min: $min-img-height, $img-max: $max-img-height) {
+	min-height: $img-min; // Fallback for older browsers
+	@include fluid-space(min-height, null, $img-min, $img-max);
+}
+
+// - PICTO
+@mixin picto-img(
+	$center: true,
+	$img-min-width: $min-picto-width,
+	$img-max-width: $max-picto-width,
+	$img-min-height: $min-picto-height,
+	$img-max-height: $max-picto-height
+) {
+	max-width: $img-min-width; // Fallback for older browsers
+	max-height: $img-min-height; // Fallback for older browsers
+	@include fluid-space(max-width, null, $img-min-width, $img-max-width);
+	@include fluid-space(max-height, null, $img-min-height, $img-max-height);
+
+	@if $center == true {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/*--------------------------------------------------------------
+# Border radius
+--------------------------------------------------------------*/
+@mixin border-radius($top-left: 6rem, $top-right: null, $bottom-right: null, $bottom-left: null) {
+	border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+/*--------------------------------------------------------------
+# ClipPath with ratio
+--------------------------------------------------------------*/
+@mixin ClipPath($size: 100%, $width: 16, $height: 9) {
+	position: relative;
+	width: $size;
+	-webkit-clip-path: url(#svg-shape);
+	clip-path: url(#svg-shape);
+
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@mixin ClipPath() {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	//@include ratio(1, 1, 100%,false,true);
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		-webkit-clip-path: url(#svgPath);
+		clip-path: url(#svgPath);
+	}
+}
+
+/*--------------------------------------------------------------
+# Ratio
+-> https://andrew.hedges.name/experiments/aspect_ratio/
+--------------------------------------------------------------*/
+@mixin ratio($width: 1, $height: 1, $padding: 100%, $pseudo: false, $img: false) {
+	// Don't use directly on img
+	aspect-ratio: $width / $height;
+
+	// Is used for not aspect ratio support (ex: safari under 15)
+	@supports (not (aspect-ratio: $width / $height)) {
+		overflow: hidden;
+	}
+
+	@if $pseudo == false {
+		@supports (not (aspect-ratio: $width / $height)) {
+			&:before {
+				content: "";
+				float: left;
+				// Change the padding for your ratio (Here is for ratio (1/1))
+				// Ex: 16/9 -> 100% /16 * 9 = 56.25%
+				padding-top: $padding;
+			}
+		}
+	}
+
+	@if $pseudo == true {
+		@supports (not (aspect-ratio: $width / $height)) {
+			padding-top: $padding;
+		}
+	}
+
+	// WARNING : For HTML structure FIGURE > IMG add TRUE to the option and and mixin on FIGURE
+	@if $img == true and $pseudo == false {
+		img {
+			position: absolute;
+			@include object-fit();
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Responsive Shapes
+--------------------------------------------------------------*/
+// WARNING only used VW
+@mixin r-shape($width: 1000, $height: 500, $screen-size: 100vw) {
+	width: $screen-size;
+	height: calc((#{$height} / #{$width}) * #{$screen-size});
+	// Calc height
+	// (((shape height -> 500) / (shape whidth -> 1000)) * (screen size you want in VW -> 100vw)) = 50vw
+}
+
+/*--------------------------------------------------------------
+# Play Video
+--------------------------------------------------------------*/
+@mixin playvideo($size: $video-play-size, $bg-color: $video-bg-color, $arrow-color: $video-arrow-color) {
+	@media (hover: hover) {
+		&:hover span:before {
+			@media (max-width: $screen-sm-max) {
+				height: calc((#{$size} / 2) + 1rem);
+				width: calc((#{$size} / 2) + 1rem);
+			}
+
+			@media (min-width: $screen-md) {
+				height: calc(#{$size} + 2rem);
+				width: calc(#{$size} + 2rem);
+			}
+		}
+	}
+
+	span {
+		@include text-hide();
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+
+		&:before {
+			@media (max-width: $screen-sm-max) {
+				height: calc((#{$size} / 2) + 1rem);
+				width: calc((#{$size} / 2) + 1rem);
+			}
+
+			@media (min-width: $screen-md) {
+				height: $size;
+				width: $size;
+			}
+		}
+
+		&:before {
+			content: "";
+			border-radius: 100%;
+			background: $bg-color;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@include transition-base();
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-30%, -50%);
+			width: 0;
+			height: 0;
+
+			@media (max-width: $screen-sm-max) {
+				border-style: solid;
+				border-width: calc(#{$arrow-height} / 4) 0 calc(#{$arrow-height} / 4) calc(#{$arrow-width} / 2);
+				border-color: transparent transparent transparent $arrow-color;
+			}
+
+			@media (min-width: $screen-md) {
+				border-style: solid;
+				border-width: calc(#{$arrow-height} / 2) 0 calc(#{$arrow-height} / 2) $arrow-width;
+				border-color: transparent transparent transparent $arrow-color;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Arrow slider
+--------------------------------------------------------------*/
+@mixin nav-slider($p-color: $primary, $s-color: white, $b-color: $primary) {
+	button {
+		border: 1px solid $b-color;
+		background: transparent;
+
+		@media (hover: hover) {
+			&:hover {
+				background: $p-color;
+
+				span:after {
+					color: $s-color;
+				}
+			}
+		}
+
+		&[disabled] {
+			@media (hover: hover) {
+				&:hover {
+					background: transparent;
+
+					span:after {
+						color: $p-color;
+					}
+				}
+			}
+		}
+
+		span {
+			&:after {
+				@include icon-svg(">", $p-color, $lite-font);
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Bullets Slider
+--------------------------------------------------------------*/
+@mixin dots-slider($p-color: $primary, $b-color: $bd-light-gray) {
+	button {
+		border: 1px solid $b-color;
+		background: transparent;
+
+		@media (hover: hover) {
+			&:hover {
+				background: $p-color;
+				border: 1px solid $p-color;
+			}
+		}
+
+		&.tns-nav-active {
+			background: $p-color;
+			border: 1px solid $p-color;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Autofill
+--------------------------------------------------------------*/
+@mixin autofill($color: $txt, $bg-color: $bg-light-gray) {
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover,
+	textarea:-webkit-autofill:focus,
+	textarea:-webkit-autofill:active,
+	select:-webkit-autofill,
+	select:-webkit-autofill:hover,
+	select:-webkit-autofill:focus,
+	select:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0 999rem $bg-color inset;
+		transition: background-color 5000s ease-in-out 0s;
+	}
+
+	input:-webkit-autofill {
+		-webkit-text-fill-color: $color !important;
+	}
+
+	::-moz-selection {
+		-webkit-text-fill-color: white !important;
+	}
+
+	::selection {
+		-webkit-text-fill-color: white !important;
+	}
+}
+
+/*--------------------------------------------------------------
+# Scrollbar
+--------------------------------------------------------------*/
+@mixin scrollbars($size: 1rem, $scrollbar-color: $txt, $background-color: $bg-light-gray) {
+	scrollbar-color: $scrollbar-color $background-color;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $scrollbar-color;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $background-color;
+	}
+}
+
+/*--------------------------------------------------------------
+# Pattern site
+--------------------------------------------------------------*/
+@mixin pattern{
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: transparent url('/img/pattern.png') no-repeat 0 0;
+	background-size: cover;
+	opacity: 0.7;
+	position: absolute;
+	z-index: -1;
+}
+

@@ -1,0 +1,36 @@
+/* Sticky menu
+--------------------------------------------------------------*/
+// If you don't need a sticky menu, comment the line (header-sticky) in style.scss and the code in sticky-menu.js
+
+body.sticky-menu {
+	#site-header {
+		padding: $sticky-padding-verical-header 0;
+
+		// 2 - Add css comment in header-sticky.scss -> sticky-menu #site-header
+		&:before{
+			bottom: 0;
+			height: 100%;
+		}
+
+		.site-branding {
+			a {
+				width: $sticky-logo-width;
+				height: $sticky-logo-height;
+
+				@media (min-width: $screen-lg) {
+					width: $lg-sticky-logo-width;
+					height: $lg-sticky-logo-height;
+				}
+			}
+		}
+	}
+	
+	#site-navigation .secondary-menu-wrapper {
+		@media (min-width: $screen-lg){
+			padding-bottom: 0;
+			max-height: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}

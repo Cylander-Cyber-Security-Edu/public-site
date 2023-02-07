@@ -1,0 +1,114 @@
+/* Site header
+--------------------------------------------------------------*/
+// Logged in
+// Site Header
+// Site branding
+// Social
+
+// -------------------------------------------------------------
+// Logged in
+// -------------------------------------------------------------
+body.admin-bar {
+	#site-header {
+		top: $admin-bar; // admin bar
+
+		@media (min-width: $screen-sm) {
+			top: $admin-bar-sm;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Site Header
+// -------------------------------------------------------------
+#site-header {
+	// 1 - Remove #site-header background
+	//background-color: white;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: $padding-verical-header 0;
+	z-index: 50;
+	@include transition-base();
+	@include grid-columns();
+
+	@media (min-width: $screen-xl) {
+		padding: $md-padding-verical-header 0;
+	}
+
+	// If you want a effect on sticky menu
+	// 1 - Remove #site-header background
+	// 2 - Add css comment in header-sticky.scss -> sticky-menu #site-header
+	// 3 - Remove background in nav-overflow.scss -> menu-open #site-header
+	// 4 - Add css comment in nav-overflow.scss -> menu-open #site-header
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		background: white;
+		@include transition-base();
+	}
+
+	&:before {
+		@include box-shadow();
+		height: 0;
+		left: 0;
+		right: 0;
+		bottom: 100%;
+	}
+
+	&:after {
+		@media (max-width: $screen-md-max) {
+			height: 100%;
+			top: 0;
+			right: 100%;
+			z-index: -1;
+		}
+	}
+
+	.header-container {
+		@include grid-area();
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+// -------------------------------------------------------------
+// Site branding
+// -------------------------------------------------------------
+#site-header .site-branding {
+	display: flex;
+	align-items: center;
+
+	a {
+		@include logo($site-name-logo);
+		@include transition-base();
+	}
+
+	h1,
+	p {
+		margin-bottom: 0;
+	}
+
+	.site-description {
+		display: none;
+		@include transition-base();
+	}
+}
+
+// -------------------------------------------------------------
+// Social
+// -------------------------------------------------------------
+#site-header .social-container {
+	ul.gbl-social-menu {
+		li {
+			@include social-media();
+		}
+	}
+}

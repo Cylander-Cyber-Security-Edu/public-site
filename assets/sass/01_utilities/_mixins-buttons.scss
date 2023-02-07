@@ -1,0 +1,257 @@
+/* MIXINS for buttons
+--------------------------------------------------------------*/
+// Main BTN
+// Read more
+// BTN back
+// List Links
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// Main BTN
+// -------------------------------------------------------------
+@mixin btn(
+	$link: true,
+	$margin: true,
+	$basic: false,
+	$color-text: $link-color,
+	$color-hover: $link-hover,
+	$color-bck: $link-color,
+	$content: "b"
+) {
+	color: $color-text;
+	font-family: $font-link;
+	line-height: $line-height;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	font-weight: 800;
+	background: $color-bck;
+	position: relative;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 3% 50%, 0 0%);
+	-webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 3% 50%, 0 0%);
+	@include padding-left($min-p-h-button, $max-p-h-button);
+	@include padding-right(5rem, 7rem);
+	@include padding-top($min-p-v-button, $max-p-v-button);
+	@include padding-bottom($min-p-v-button, $max-p-v-button);
+	@include fluid-type($min-font, $max-font);
+	@include transition-base();
+	z-index: 1;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+		background: white;
+		clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 3% 50%, 0 0%);
+		-webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 3% 50%, 0 0%);
+		@include transition-base();
+	}
+
+	&:after {
+		@include icon-svg($content, $color-text, 1.4rem);
+		display: inline-block;
+		font-weight: bold;
+		position: absolute;
+		right: 2.5rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		height: 1.4rem;
+		width: 1.4rem;
+		line-height: 1;
+		@include transition-base();
+		
+		@media (min-width: $screen-md) and (max-width: $screen-md-max){
+			right: 3rem;
+		}
+		
+		@media (min-width: $screen-lg){
+			right: 4rem;
+		}
+	}
+
+	@if $margin {
+		@include margin-button();
+	}
+
+	@if $link == true {
+		@media (hover: hover) {
+			&:hover {
+				background: $color-hover;
+				color: $color-hover;
+				clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 0% 50%, 0 0%);
+				-webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 0% 50%, 0 0%);
+
+				&:before {
+					clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 0% 50%, 0 0%);
+					-webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%, 0% 50%, 0 0%);
+				}
+				
+				&:after{
+					color: $color-hover;
+					transform: translate(0, -50%) rotate(45deg);
+				}
+
+				@if $basic == false {
+					// Here css for specific btn with span,i,...
+				}
+			}
+		}
+
+		&:active,
+		&:focus {
+			background: $color-hover;
+			color: $color-hover;
+
+			@if $basic == false {
+				// Here css for specific btn with span,i,...
+			}
+		}
+	}
+
+	@if $basic == false {
+		// Here css for specific btn with span,i,...
+	}
+}
+
+// -------------------------------------------------------------
+// Read more
+// -------------------------------------------------------------
+@mixin readmore($link: true, $margin: true, $color: $link-color, $color-hover: $link-hover, $content: "b") {
+	color: $color;
+	font-family: $font-link;
+	line-height: $line-height;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 800;
+	position: relative;
+	text-decoration: none;
+	display: table;
+	padding-right: 2.5rem;
+	@include fluid-type($min-font, $max-font);
+	@include transition-base();
+
+	&:after {
+		@include icon-svg($content, $color-hover, 1.4rem);
+		display: inline-block;
+		font-weight: bold;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+		height: 1.4rem;
+		width: 1.4rem;
+		line-height: 1;
+		@include transition-base();
+	}
+
+	@if $margin {
+		@include margin-readmore();
+	}
+
+	@if $link {
+		@media (hover: hover) {
+			&:hover {
+				color: $color-hover;
+				padding-right: 3.5rem;
+
+				&:after {
+					color: $color-hover;
+					transform: translate(0, -50%) rotate(45deg);
+				}
+			}
+		}
+
+		&:active,
+		&:focus {
+			color: $color-hover;
+		}
+	}
+}
+
+// // -------------------------------------------------------------
+// // BTN back
+// // -------------------------------------------------------------
+// @mixin btnback($margin: true, $color: $link-color, $color-hover: $link-hover, $content: ">") {
+// 	color: $color;
+// 	font-family: $font-body;
+// 	line-height: $line-height;
+// 	position: relative;
+// 	text-decoration: none;
+// 	display: flex;
+// 	align-items: center;
+// 	@include fluid-type($min-font, $max-font);
+// 	@include transition-base();
+
+// 	&:before {
+// 		@include icon-svg($content, $color, 1.2rem);
+// 		transform: scaleX(-1);
+// 		display: block;
+// 		margin-right: 1rem;
+// 		@include transition-base();
+// 	}
+
+// 	@if $margin {
+// 		@include margin-readmore();
+// 	}
+
+// 	@media (hover: hover) {
+// 		&:hover {
+// 			color: $color-hover;
+
+// 			&:before {
+// 				color: $color-hover;
+// 			}
+// 		}
+// 	}
+
+// 	&:active,
+// 	&:focus {
+// 		color: $color-hover;
+// 	}
+// }
+
+// // -------------------------------------------------------------
+// // List Links
+// // -------------------------------------------------------------
+// @mixin listlinks($content: ">", $color: $link-color, $color-hover: $link-hover) {
+// 	color: $color;
+// 	font-family: $font-body;
+// 	line-height: $line-height;
+// 	position: relative;
+// 	text-decoration: none;
+// 	display: block;
+// 	@include transition-base();
+
+// 	@media (hover: hover) {
+// 		&:hover {
+// 			color: $color-hover;
+
+// 			&:after {
+// 				color: $color-hover;
+// 			}
+// 		}
+// 	}
+
+// 	&:active,
+// 	&:focus {
+// 		color: $color-hover;
+// 	}
+
+// 	&:after {
+// 		@include icon-svg($content, $color, 1.3rem);
+// 		display: block;
+// 		position: absolute;
+// 		right: 0;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 		@include transition-base();
+// 	}
+// }

@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+# Mixins for typography : so you can put title styles on element without headings
+--------------------------------------------------------------*/
+@mixin high-title($color: $title) {
+	font-family: $font-title;
+	font-weight: 600;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(5rem, 6rem);
+}
+
+@mixin h1($color: $title) {
+	font-family: $font-title;
+	font-weight: 600;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(4rem, 7rem);
+}
+
+@mixin h2($color: $title) {
+	font-family: $font-title;
+	font-weight: 500;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(3.4rem, 5rem);
+}
+
+@mixin h3($color: $title) {
+	font-family: $font-title;
+	font-weight: 500;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(3rem, 4rem);
+}
+
+@mixin h4($color: $txt) {
+	font-family: $font-title;
+	font-weight: 500;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(2.6rem, 3rem);
+}
+
+@mixin h5($color: $txt) {
+	font-family: $font-title;
+	font-weight: 500;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(2.2rem, 2.6rem);
+}
+
+@mixin h6($color: $txt) {
+	font-family: $font-title;
+	font-weight: 500;
+	color: $color;
+	line-height: $line-height-title;
+	@include fluid-type(2rem, 2.2rem);
+}

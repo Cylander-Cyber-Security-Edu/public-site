@@ -1,0 +1,310 @@
+// MIXINS SPACING
+// -------------------------------------------------------------
+// Grid
+// Inner Container
+// Margin Buttons
+// Margin Readmore
+// Margin Titles
+// Margin
+// Margin small
+// Padding
+// Padding small
+// -------------------------------------------------------------
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+// - Grid columns
+// --------------------------------------------------------------
+@mixin grid-columns($columns: $grid) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+}
+
+// - Grid area equal
+// --------------------------------------------------------------
+@mixin grid-area($row-start: auto, $column-start: $grid-start, $row-end: auto, $column-end: $grid) {
+	grid-area: #{$row-start} / #{$column-start} / #{$row-end} / calc((#{$column-end} + 1) - (#{$column-start} - 1));
+}
+
+// - Grid area custom
+// --------------------------------------------------------------
+@mixin grid-area-c($row-start: auto, $column-start: $grid-start, $row-end: auto, $column-end: $grid) {
+	grid-area: #{$row-start} / #{$column-start} / #{$row-end} / #{$column-end};
+}
+
+// - Grid gap
+// --------------------------------------------------------------
+
+@mixin grid-gap($g-b-min: $min-g-b, $g-b-max: $max-g-b, $g-min: $min-g, $g-max: $max-g) {
+	$factor-b: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($g-b-max - $g-b-min);
+	$calc-value-b: unquote("#{$g-b-min - ($screen-min-xxs * $factor-b)} + #{ 100vw * $factor-b}");
+	$factor: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($g-max - $g-min);
+	$calc-value: unquote("#{$g-min - ($screen-min-xxs * $factor)} + #{ 100vw * $factor}");
+
+	grid-gap: $g-b-min $g-min; // Fallback for older browsers
+	grid-gap: clamp(
+			#{if($g-b-min > $g-b-max, $g-b-max, $g-b-min)},
+			#{$calc-value-b},
+			#{if($g-b-min > $g-b-max, $g-b-min, $g-b-max)}
+		)
+		clamp(#{if($g-min > $g-max, $g-max, $g-min)}, #{$calc-value}, #{if($g-min > $g-max, $g-min, $g-max)});
+}
+
+// - Grid gap multiblocks
+// --------------------------------------------------------------
+
+@mixin grid-gap-multiblocks($g-b-m-min: $min-g-m-b, $g-b-m-max: $max-g-m-b, $g-m-min: $min-g-m, $g-m-max: $max-g-m) {
+	$factor-b: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($g-b-m-max - $g-b-m-min);
+	$calc-value-b: unquote("#{$g-b-m-min - ($screen-min-xxs * $factor-b)} + #{ 100vw * $factor-b}");
+	$factor: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($g-m-max - $g-m-min);
+	$calc-value: unquote("#{$g-m-min - ($screen-min-xxs * $factor)} + #{ 100vw * $factor}");
+
+	grid-gap: $g-b-m-min $g-m-min; // Fallback for older browsers
+	grid-gap: clamp(
+			#{if($g-b-m-min > $g-b-m-max, $g-b-m-max, $g-b-m-min)},
+			#{$calc-value-b},
+			#{if($g-b-m-min > $g-b-m-max, $g-b-m-min, $g-b-m-max)}
+		)
+		clamp(
+			#{if($g-m-min > $g-m-max, $g-m-max, $g-m-min)},
+			#{$calc-value},
+			#{if($g-m-min > $g-m-max, $g-m-min, $g-m-max)}
+		);
+}
+
+// - Grid gap small
+// --------------------------------------------------------------
+
+@mixin grid-gap-small(
+	$g-b-small-min: $min-small-g,
+	$g-b-small-max: $max-small-g,
+	$g-small-min: $min-small-g,
+	$g-small-max: $max-small-g
+) {
+	$factor-b: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($g-b-small-max - $g-b-small-min);
+	$calc-value-b: unquote("#{$g-b-small-min - ($screen-min-xxs * $factor-b)} + #{ 100vw * $factor-b}");
+	$factor: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($g-small-max - $g-small-min);
+	$calc-value: unquote("#{$g-small-min - ($screen-min-xxs * $factor)} + #{ 100vw * $factor}");
+
+	grid-gap: $g-b-small-min $g-small-min; // Fallback for older browsers
+	grid-gap: clamp(
+			#{if($g-b-small-min > $g-b-small-max, $g-b-small-max, $g-b-small-min)},
+			#{$calc-value-b},
+			#{if($g-b-small-min > $g-b-small-max, $g-b-small-min, $g-b-small-max)}
+		)
+		clamp(
+			#{if($g-small-min > $g-small-max, $g-small-max, $g-small-min)},
+			#{$calc-value},
+			#{if($g-small-min > $g-small-max, $g-m-min, $g-small-max)}
+		);
+}
+
+/*--------------------------------------------------------------
+# Inner Container
+--------------------------------------------------------------*/
+@mixin container-inner(
+	$marge: true,
+	$ci-md: $container-inner-md,
+	$ci-lg: $container-inner-lg,
+	$ci-xl: $container-inner-xl,
+	$ci-xxl: $container-inner-xxl,
+	$ci-xxxl: $container-inner-xxxl,
+	$flex: null
+) {
+	$factor: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-p - $min-p);
+	$calc-value: unquote("#{$min-p - ($screen-min-xxs * $factor)} + #{ 100vw * $factor}");
+	$final-value: (
+		#{clamp(#{if($min-p > $max-p, $max-p, $min-p)}, #{$calc-value}, #{if($min-p > $max-p, $min-p, $max-p)})}
+	);
+
+	@if $marge == true {
+		@media (min-width: $screen-md) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	@if $flex == null {
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			width: $ci-md;
+		}
+
+		@media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+			width: $ci-lg;
+		}
+
+		@media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
+			width: $ci-xl;
+		}
+
+		@media (min-width: $screen-xxl) and (max-width: $screen-xxl-max) {
+			width: $ci-xxl;
+		}
+
+		@media (min-width: $screen-xxxl) {
+			width: $ci-xxxl;
+		}
+	} @else if $flex == flex {
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			width: calc(#{$ci-md} + (2 * #{$min-p})); // Fallback for older browsers
+			width: calc(#{$ci-md} + (2 * #{$final-value}));
+		}
+
+		@media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+			width: calc(#{$ci-lg} + (2 * #{$min-p})); // Fallback for older browsers
+			width: calc(#{$ci-lg} + (2 * #{$final-value}));
+		}
+
+		@media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
+			width: calc(#{$ci-xl} + (2 * #{$min-p})); // Fallback for older browsers
+			width: calc(#{$ci-xl} + (2 * #{$final-value}));
+		}
+
+		@media (min-width: $screen-xxl) and (max-width: $screen-xxl-max) {
+			width: calc(#{$ci-xxl} + (2 * #{$min-p})); // Fallback for older browsers
+			width: calc(#{$ci-xxl} + (2 * #{$final-value}));
+		}
+
+		@media (min-width: $screen-xxxl) {
+			width: calc(#{$ci-xxxl} + (2 * #{$min-p})); // Fallback for older browsers
+			width: calc(#{$ci-xxxl} + (2 * #{$final-value}));
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Margin Buttons
+--------------------------------------------------------------*/
+@mixin margin-button($button-min: $min-button, $button-max: $max-button) {
+	margin-top: $button-min; // Fallback for older browsers
+	@include fluid-space(margin, top, $button-min, $button-max);
+}
+
+/*--------------------------------------------------------------
+# Margin Readmore
+--------------------------------------------------------------*/
+@mixin margin-readmore($readmore-min: $min-readmore, $readmore-max: $max-readmore) {
+	margin-top: $min-readmore; // Fallback for older browsers
+	@include fluid-space(margin, top, $readmore-min, $readmore-max);
+}
+
+/*--------------------------------------------------------------
+# Margin Titles
+--------------------------------------------------------------*/
+@mixin margin-title($title-min: $min-title, $title-max: $max-title) {
+	margin-top: 0;
+	margin-bottom: $min-title; // Fallback for older browsers
+	@include fluid-space(margin, bottom, $title-min, $title-max);
+}
+
+/*--------------------------------------------------------------
+# Margin
+--------------------------------------------------------------*/
+@mixin margin($m-min: $min-m, $m-max: $max-m) {
+	margin: $min-m; // Fallback for older browsers
+	@include fluid-space(margin, null, $m-min, $m-max);
+}
+
+@mixin margin-bottom($m-min: $min-m, $m-max: $max-m) {
+	margin-bottom: $min-m; // Fallback for older browsers
+	@include fluid-space(margin, bottom, $m-min, $m-max);
+}
+
+@mixin margin-top($m-min: $min-m, $m-max: $max-m) {
+	margin-top: $min-m; // Fallback for older browsers
+	@include fluid-space(margin, top, $m-min, $m-max);
+}
+
+@mixin margin-left($m-min: $min-m, $m-max: $max-m) {
+	margin-left: $min-m; // Fallback for older browsers
+	@include fluid-space(margin, left, $m-min, $m-max);
+}
+
+@mixin margin-right($m-min: $min-m, $m-max: $max-m) {
+	margin-right: $min-m; // Fallback for older browsers
+	@include fluid-space(margin, right, $m-min, $m-max);
+}
+
+/*--------------------------------------------------------------
+# Margin small
+--------------------------------------------------------------*/
+@mixin margin-small($m-min: $min-small-s, $m-max: $max-small-s) {
+	margin: $min-small-s; // Fallback for older browsers
+	@include fluid-space(margin, null, $m-min, $m-max);
+}
+
+@mixin margin-small-bottom($m-min: $min-small-s, $m-max: $max-small-s) {
+	margin-bottom: $min-small-s; // Fallback for older browsers
+	@include fluid-space(margin, bottom, $m-min, $m-max);
+}
+
+@mixin margin-small-top($m-min: $min-small-s, $m-max: $max-small-s) {
+	margin-top: $min-small-s; // Fallback for older browsers
+	@include fluid-space(margin, top, $m-min, $m-max);
+}
+
+@mixin margin-small-left($m-min: $min-small-s, $m-max: $max-small-s) {
+	margin-left: $min-small-s; // Fallback for older browsers
+	@include fluid-space(margin, left, $m-min, $m-max);
+}
+
+@mixin margin-small-right($m-min: $min-small-s, $m-max: $max-small-s) {
+	margin-right: $min-small-s; // Fallback for older browsers
+	@include fluid-space(margin, right, $m-min, $m-max);
+}
+
+/*--------------------------------------------------------------
+# Padding
+--------------------------------------------------------------*/
+@mixin padding($p-min: $min-p, $p-max: $max-p) {
+	padding: $min-p; // Fallback for older browsers
+	@include fluid-space(padding, null, $p-min, $p-max);
+}
+
+@mixin padding-bottom($p-min: $min-p, $p-max: $max-p) {
+	padding-bottom: $min-p; // Fallback for older browsers
+	@include fluid-space(padding, bottom, $p-min, $p-max);
+}
+
+@mixin padding-top($p-min: $min-p, $p-max: $max-p) {
+	padding-top: $min-p; // Fallback for older browsers
+	@include fluid-space(padding, top, $p-min, $p-max);
+}
+
+@mixin padding-left($p-min: $min-p, $p-max: $max-p) {
+	padding-left: $min-p; // Fallback for older browsers
+	@include fluid-space(padding, left, $p-min, $p-max);
+}
+
+@mixin padding-right($p-min: $min-p, $p-max: $max-p) {
+	padding-right: $min-p; // Fallback for older browsers
+	@include fluid-space(padding, right, $p-min, $p-max);
+}
+
+/*--------------------------------------------------------------
+# Padding small
+--------------------------------------------------------------*/
+@mixin padding-small($p-min: $min-small-s, $p-max: $max-small-s) {
+	padding: $min-small-s; // Fallback for older browsers
+	@include fluid-space(padding, null, $p-min, $p-max);
+}
+
+@mixin padding-small-bottom($p-min: $min-small-s, $p-max: $max-small-s) {
+	padding-bottom: $min-small-s; // Fallback for older browsers
+	@include fluid-space(padding, bottom, $p-min, $p-max);
+}
+
+@mixin padding-small-top($p-min: $min-small-s, $p-max: $max-small-s) {
+	padding-top: $min-small-s; // Fallback for older browsers
+	@include fluid-space(padding, top, $p-min, $p-max);
+}
+
+@mixin padding-small-left($p-min: $min-small-s, $p-max: $max-small-s) {
+	padding-left: $min-small-s; // Fallback for older browsers
+	@include fluid-space(padding, left, $p-min, $p-max);
+}
+
+@mixin padding-small-right($p-min: $min-small-s, $p-max: $max-small-s) {
+	padding-right: $min-small-s; // Fallback for older browsers
+	@include fluid-space(padding, right, $p-min, $p-max);
+}

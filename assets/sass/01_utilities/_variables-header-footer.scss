@@ -1,0 +1,68 @@
+// VARIABLES HEADER FOOTER
+// -------------------------------------------------------------
+// Site Logo
+// Header
+// Footer
+
+// -------------------------------------------------------------
+// Site Logo
+// -------------------------------------------------------------
+$site-name-logo: cylander;
+$site-name-logo-white: cylander-white;
+
+// Width
+$logo-width: 8rem;
+$xs-logo-width: 8rem;
+$sm-logo-width: 8rem;
+$md-logo-width: 10rem;
+$lg-logo-width: 14rem;
+$xl-logo-width: 14rem;
+$xxl-logo-width: 16.3rem;
+$xxxl-logo-width: 16.3rem;
+
+// Height
+$logo-height: 5rem;
+$xs-logo-height: 5rem;
+$sm-logo-height: 5rem;
+$md-logo-height: 6.2rem;
+$lg-logo-height: 8.6rem;
+$xl-logo-height: 8.6rem;
+$xxl-logo-height: 10rem;
+$xxxl-logo-height: 10rem;
+
+// Sticky
+$sticky-logo-width: $logo-width;
+$sticky-logo-height: $logo-height;
+$lg-sticky-logo-width: $sticky-logo-width;
+$lg-sticky-logo-height: $sticky-logo-height;
+
+// Footer
+$footer-logo-width: $lg-logo-width;
+$footer-logo-height: $lg-logo-height;
+
+// -------------------------------------------------------------
+// Header
+// -------------------------------------------------------------
+// Admin Bar
+$admin-bar: 4.6rem;
+$admin-bar-sm: 3.2rem;
+
+// Header height
+$height-header: 9rem;
+$xs-height-header: 9rem;
+$sm-height-header: 9rem;
+$md-height-header: 10.2rem;
+$lg-height-header: 12.6rem;
+$xl-height-header: 14.6rem;
+$xxl-height-header: 16rem;
+$xxxl-height-header: 16rem;
+
+// Padding top/bottom
+$padding-verical-header: 2rem;
+$md-padding-verical-header: 3rem;
+$sticky-padding-verical-header: $padding-verical-header;
+
+// Height header sticky
+$height-sticky-header: calc(#{$logo-height} + (#{$sticky-padding-verical-header} * 2));
+$height-sticky-header-lg: calc(#{$md-logo-height} + (#{$sticky-padding-verical-header} * 2));
+// Warning - change logo-height / $md-logo-height with the height of the element which is bigger than the logo

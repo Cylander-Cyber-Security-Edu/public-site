@@ -1,0 +1,17 @@
+/* ALL Posts
+--------------------------------------------------------------*/
+
+body.page-template-all-posts{
+	.wrapper-grid {
+		display: grid;
+		@include grid-gap-multiblocks();
+
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (min-width: $screen-lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

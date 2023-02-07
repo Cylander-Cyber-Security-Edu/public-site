@@ -1,0 +1,195 @@
+/* SCAFFOLDING
+--------------------------------------------------------------*/
+// Basic styles and resets for html tags
+
+// HTML and body
+// Mouse selector
+// Img
+// Video
+// Wysiwyg Format
+// Captcha
+// Hide WPML ribbon
+// Img Hack IE
+// Hide Element
+
+// -------------------------------------------------------------
+// HTML and body
+// -------------------------------------------------------------
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--vh: 1vh;
+}
+
+html {
+	font-size: 62.5%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: $font-body;
+	font-weight: 300; // book
+	line-height: $line-height;
+	@include fluid-type();
+	color: $txt;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+*{
+	scroll-padding-top: 9rem; // height sticky
+}
+
+main {
+	display: block;
+}
+
+// -------------------------------------------------------------
+// Mouse selector
+// -------------------------------------------------------------
+
+::-moz-selection {
+	background: $primary;
+	color: white;
+	text-shadow: none;
+}
+
+::selection {
+	background: $primary;
+	color: white;
+	text-shadow: none;
+}
+
+//-------------------------------------------------------------
+// Img
+// -------------------------------------------------------------
+
+.bg-img {
+	@include text-hide();
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.fit-img > img {
+	@include object-fit();
+}
+
+.picto-img > img {
+	@include picto-img();
+}
+
+figure {
+	margin: 0;
+	background-repeat: no-repeat;
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+}
+
+// -------------------------------------------------------------
+// Video
+// -------------------------------------------------------------
+
+.embed-container,
+.video-responsive,
+.bg-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+.embed-container,
+.video-responsive,
+.bg-video {
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// -------------------------------------------------------------
+// Wysiwyg Format
+// -------------------------------------------------------------
+
+.clear-both {
+	clear: both;
+}
+
+.txt-uppercase {
+	text-transform: uppercase;
+}
+
+//--------------------------------------------------------------
+// Captcha
+//--------------------------------------------------------------
+body:not(.page-template-contact) {
+	.grecaptcha-badge {
+		display: none;
+		z-index: 900;
+	}
+}
+
+//--------------------------------------------------------------
+// Hide WPML ribbon
+//--------------------------------------------------------------
+.otgs-development-site-front-end,
+.wpml-ls-statics-footer {
+	display: none;
+}
+
+//--------------------------------------------------------------
+// Hack IE
+//--------------------------------------------------------------
+_:-ms-input-placeholder,
+:root {
+	body.page,
+	body.single,
+	body.search,
+	body.error404 {
+		#page.site {
+			figure {
+				img {
+					height: auto;
+					max-height: initial;
+				}
+			}
+		}
+	}
+}
+
+//--------------------------------------------------------------
+// Hide Element
+//--------------------------------------------------------------
+[hidden],
+.hidden,
+.visually-hidden {
+	display: none;
+}

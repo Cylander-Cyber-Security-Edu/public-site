@@ -1,0 +1,101 @@
+// VARIABLES SPACING
+// -------------------------------------------------------------
+// Grid
+// Max Container
+// Container Inner Flex Margin and No Margin
+// Flex Size of columns
+// Margin / Padding
+// Gap
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// Grid
+// -------------------------------------------------------------
+$grid: 16;
+$grid-start: 2;
+
+// -------------------------------------------------------------
+// Max Container
+// -------------------------------------------------------------
+$max-width: 256rem;
+
+// -------------------------------------------------------------
+// Container Inner Flex Margin and No Margin
+// -------------------------------------------------------------
+$container-inner-md: 80%;
+$container-inner-lg: 70%;
+$container-inner-xl: 70%;
+$container-inner-xxl: 60%;
+$container-inner-xxxl: 60%;
+
+// -------------------------------------------------------------
+// Container first third flex
+// -------------------------------------------------------------
+$first-third: 30%;
+
+// -------------------------------------------------------------
+// Margin / Padding
+// -------------------------------------------------------------
+// Margin title
+// -------------------------------------------------------------
+$min-title: 2rem;
+$max-title: 3rem;
+
+// Margin <p>
+// -------------------------------------------------------------
+$min-m-p: 2rem;
+$max-m-p: 3rem;
+
+// BTN
+// -------------------------------------------------------------
+
+// - Padding BTN
+$min-p-v-button: 1.5rem;
+$max-p-v-button: 2rem;
+
+$min-p-h-button: 2rem;
+$max-p-h-button: 4rem;
+
+// - Margin BTN
+$min-button: 2rem;
+$max-button: 4rem;
+
+// - Margin readmore
+$min-readmore: 2rem;
+$max-readmore: 4rem;
+
+// Base
+// -------------------------------------------------------------
+// - Small space
+$min-small-s: 2rem;
+$max-small-s: 4rem;
+
+// - Margin
+$min-m: 2rem;
+$max-m: 12rem;
+
+// - Padding
+$min-p: 2rem;
+$max-p: 12rem;
+
+// Gap
+// -------------------------------------------------------------
+// - Small gap
+$min-small-g: 2rem;
+$max-small-g: 4rem;
+
+// - Right
+$min-g: 2rem;
+$max-g: 12rem;
+
+// - Bottom
+$min-g-b: $min-g;
+$max-g-b: $max-g;
+
+// - Multiblocks
+$min-g-m: 2rem;
+$max-g-m: 6rem;
+
+// - Multiblocks bottom
+$min-g-m-b: 2rem;
+$max-g-m-b: 6rem;

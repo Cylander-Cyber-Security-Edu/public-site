@@ -1,0 +1,783 @@
+/* HOMEPAGE template
+--------------------------------------------------------------*/
+// global
+// hero
+// mission
+// action
+// future	
+// partners
+// last news
+// contact
+	
+body.home {
+
+	//--------------------------------------------------------------
+	// global
+	//--------------------------------------------------------------
+	section:not(.hero):not(.future){
+		@include margin-bottom;
+	}
+	
+	.hero,
+	.mission,
+	.action,
+	.future,
+	.partners,
+	.last-news,
+	.contact {
+		@include grid-columns();
+		position: relative;
+	}
+	
+	.mission,
+	.action,
+	.contact{
+		.section-wrapper{
+			@media (max-width: $screen-lg-max) {
+				@include grid-area(auto, 2);
+			}
+			
+			@media (min-width: $screen-xl) {
+				@include grid-area(auto, 3);
+			}
+		}
+	}
+	
+	.container-section{
+		@include margin-top(4rem,8rem);
+		position: relative;
+		
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			transform: skewY(5deg);
+		}
+		
+		&.top{
+			&:after{
+				background: #141942;
+				background: -webkit-linear-gradient(0deg, #141942 0%, #490b55 100%);
+				background: linear-gradient(0deg, #141942 0%, #490b55 100%);
+				
+				@media (min-width: $screen-md) and (max-width: $screen-md-max){
+					height: calc(100% - 4rem);
+				}
+				
+				@media (min-width: $screen-lg) and (max-width: $screen-lg-max){
+					height: calc(100% - 6rem);
+				}
+				
+				@media (min-width: $screen-xl){
+					height: calc(100% - 10rem);
+				}
+			}
+			
+			.section-wrapper{
+				color: white;
+						
+				h2,
+				h3,
+				h4,
+				h5,
+				h6{
+					color: white;
+				}
+			}
+		}
+		
+		&.bottom:after{
+			background: rgb(28,23,69);
+			background: -moz-linear-gradient(180deg, rgba(28,23,69,1) 0%, rgba(14,15,50,1) 50%, rgba(14,15,50,1) 100%);
+			background: -webkit-linear-gradient(180deg, rgba(28,23,69,1) 0%, rgba(14,15,50,1) 50%, rgba(14,15,50,1) 100%);
+			background: linear-gradient(180deg, rgba(28,23,69,1) 0%, rgba(14,15,50,1) 50%, rgba(14,15,50,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1745",endColorstr="#0e0f32",GradientType=1);
+			height: 100%;
+			
+			@media (max-width: $screen-sm-max){
+				top: 15%;
+			}
+			
+			@media (min-width: $screen-md) and (max-width: $screen-lg-max){
+				top: 20%;
+			}
+			
+			@media (min-width: $screen-xl){
+				top: 30%;
+				height: 90%;
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// hero
+	//--------------------------------------------------------------
+	.hero {
+		@media (max-width: $screen-xs-max) {
+			padding-top: 3rem;
+		}
+
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+			padding-top: 6rem;
+		}
+
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			padding-top: $md-height-header;
+		}
+
+		@media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+			padding-top: $lg-height-header;
+		}
+
+		@media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
+			padding-top: $xl-height-header;
+		}
+
+		@media (min-width: $screen-xxl) and (max-width: $screen-xxl-max) {
+			padding-top: $xxl-height-header;
+		}
+
+		@media (min-width: $screen-xxxl) {
+			padding-top: $xxxl-height-header;
+		}
+		
+		&:after{
+			@include pattern;
+			background-image: url('/img/pattern-hero-hp.png');
+			background-position: 100px 0;
+			top: 20%;
+		    right: 0;
+		    
+		    @media (min-width: $screen-md){
+				top: 50%;
+			}
+		}
+
+		.section-wrapper {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			@include padding-bottom(4rem, 10rem);
+			@include grid-area(auto, 3);
+			
+			@media (min-width: $screen-lg) {
+				max-width: 80%;
+				margin: 0 auto;
+			}
+			
+			@media (min-width: $screen-xxl){
+				max-width: 70%;
+			}
+
+			// page-header
+			//--------------------------------------------------------------
+			.page-header {
+				.page-content {
+					position: relative;
+					text-align: center;
+					
+					h1{
+						margin-bottom: 0;
+						font-weight: 500;
+
+						span{
+							display: block;	
+							background: #de488d;
+							background: -webkit-linear-gradient(120deg, #de488d 0%, #263184 100%);
+							background: linear-gradient(120deg, #de488d 0%, #263184 100%);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+							@include fluid-type(4rem, 7rem);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// mission
+	//--------------------------------------------------------------
+	.mission{
+		.section-wrapper{
+			display: flex;
+			flex-direction: column-reverse;
+			
+			@media (min-width: $screen-md){
+				flex-direction: row;
+			}
+			
+			.inner-content{ 
+				@include padding-right(2rem,20rem);
+				
+				@media (min-width: $screen-md){
+					flex: 1 0 60%;
+					padding-top: 4rem;
+				}
+				
+				.intro{
+					@include margin-small-bottom;
+					@include fluid-type(1.8rem, 2rem);
+					font-weight: 400;
+				}
+			}
+			
+			.inner-picture{
+				@include margin-top(-4rem,-8rem);
+				position: relative;
+				
+				@media (max-width: $screen-sm-max){
+					@include margin-small-bottom;
+					max-width: 40rem;
+					margin-left: auto;
+					margin-right: auto;				
+				}
+				
+				@media (min-width: $screen-md){
+					flex: 0 0 40%;
+					width: 40%;
+					height: min-content;
+				}
+				
+				svg:not(.svg-mask ){
+					position: absolute;
+					z-index: 1;
+
+					&.shape-one{
+						height: 13rem;
+						width: 6rem;
+						bottom: 6rem;
+						left: -1rem;
+						
+						@media (min-width: $screen-sm){
+							height: 20rem;
+							width: 9rem;
+							left: -3rem;
+						}
+						
+						@media (min-width: $screen-xl){
+							height: 30rem;
+							width: 13rem;
+						}
+						
+						@media (min-width: $screen-xxl){
+							height: 40rem;
+							width: 17rem;
+						}
+					}
+					
+					&.shape-two{
+						height: 3rem;
+					    width: 6rem;
+					    top: 10rem;
+					    right: -1rem;
+					    
+					    @media (min-width: $screen-sm){
+							height: 5rem;
+							width: 8rem;
+						}
+					    
+					    @media (min-width: $screen-md){
+							right: -3rem;
+						}
+						
+						@media (min-width: $screen-xl){
+							height: 10rem;
+							width: 22rem;
+							right: -11rem;
+						}
+						
+						@media (min-width: $screen-xxl){
+							height: 11rem;
+							width: 26rem;
+							right: -15rem;
+						}
+					}
+				}
+				
+				.svg-mask {
+					overflow: visible;
+					height: 100%;
+					width: 100%;
+					
+					.svg-clipped{
+						-webkit-clip-path: url(#clipPath-1);
+                        clip-path: url(#clipPath-1);
+                        @include object-fit;
+					}
+				}
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// action
+	//--------------------------------------------------------------
+	.action{
+		.section-wrapper{
+			@media (min-width: $screen-lg){
+				@include padding-left(2rem,9rem);
+			}
+		
+			.row-wrapper{
+				display: flex;
+				flex-wrap: wrap;
+				
+				@media (min-width: $screen-md){
+					justify-content: flex-end;
+				}
+				
+				@media (min-width: $screen-md) and (max-width: $screen-lg-max){
+					width: calc(100% + 2rem);
+				}
+				
+				@media (min-width: $screen-xl){
+				    width: calc(100% + 3rem);
+				}
+				
+				> div{
+					@media (max-width: $screen-sm-max){
+						margin-bottom: 2rem;
+					}
+				
+					@media (min-width: $screen-md) and (max-width: $screen-lg-max){
+						margin: 2rem;
+					}
+					
+					@media (min-width: $screen-xl){
+						margin: 3rem;
+					}
+				}
+				
+				.inner-content{					
+					@media (min-width: $screen-md){	    
+						height: 100%;
+						padding: 6rem 0;
+					}
+					
+					@media (min-width: $screen-md) and (max-width: $screen-lg-max){
+						flex: 0 0 calc(40% - 4rem);
+						margin-bottom: 6rem;
+					}
+					
+					@media (min-width: $screen-xl){
+						flex: 0 0 calc(40% - 6rem);
+						margin-bottom: 9rem;
+					}
+				}
+				
+				.row{
+					border: 3px solid rgba(white,0.2);
+					border-radius: 1rem;
+					@include padding(2rem,6rem);
+					
+					@media (min-width: $screen-md){
+						border: 6px solid rgba(white,0.2);
+						height: 100%;
+					}
+					
+					&:nth-child(odd){
+						@media (min-width: $screen-md) and (max-width: $screen-lg-max){   
+							flex: 0 0 calc(60% - 4rem);
+						}
+						
+						@media (min-width: $screen-xl){
+							flex: 0 0 calc(60% - 6rem);
+						}
+					}
+					
+					&:nth-child(even){
+						@media (min-width: $screen-md) and (max-width: $screen-lg-max){   
+							flex: 0 0 calc(40% - 4rem);
+						}
+						
+						@media (min-width: $screen-xl){
+							flex: 0 0 calc(40% - 6rem);
+						}
+					}
+					
+					&.one{
+						@media (min-width: $screen-md){
+							order: -1;
+							flex: 0 0 36%;
+						}
+					}
+					
+					&.three{
+						@media (min-width: $screen-md) and (max-width: $screen-lg-max){
+							margin-top: -6rem;
+						}
+						
+						@media (min-width: $screen-xl){
+							margin-top: -9rem;
+						}
+					}
+					
+					h3{
+						@include h5(white);
+						text-transform: uppercase;
+						letter-spacing: 4px;
+					}
+				}
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// future
+	//--------------------------------------------------------------
+	.future{
+		@media (max-width: $screen-lg-max){
+			@include margin-bottom;
+		}
+
+		&:after{
+			@include pattern;
+			bottom: -35%;
+			right: 0;
+			transform: scale(-1);
+		}
+		
+		.section-wrapper{
+			@media (min-width: $screen-md){
+				display: flex;
+			}
+
+			@media (max-width: $screen-lg-max) {
+				@include grid-area(auto, 1);
+			}
+			
+			@media (min-width: $screen-xl){
+				@include grid-area-c(auto, 1, auto, calc(#{$grid} - 1));
+				margin-bottom: 0;
+			}
+			
+			.inner-picture{	
+				@media (max-width: $screen-sm-max){
+					max-width: 30rem;
+					margin-left: auto;
+					margin-right: auto;				
+				}
+				
+				@media (min-width: $screen-md){
+					flex: 1 0 28%;
+				}
+				
+				+ .inner-content{
+					@include padding-left;
+				}
+				
+				.svg-mask {
+					overflow: visible;
+					height: 100%;
+					width: 100%;
+					
+					@media (min-width: $screen-md){
+						margin-left: -4rem;
+					}
+					
+					@media (min-width: $screen-xl){
+						height: 70rem;
+					}
+					
+					.svg-clipped{
+						-webkit-clip-path: url(#clipPath-1);
+                        clip-path: url(#clipPath-1);
+                        @include object-fit;
+					}
+				}
+			}
+			
+			.inner-content{
+				@include padding-bottom;
+				@include padding-top;
+				
+				@media (max-width: $screen-md-max){
+					@include padding-right;
+				}
+				
+				@media (min-width: $screen-md){
+					flex: 1 0 72%;
+				}
+				
+				@media (min-width: $screen-lg){
+					padding-right: 6rem;
+				}
+				
+				@media (max-width: $screen-lg-max){
+					@include margin-small-bottom;
+				}
+				
+				.col-text{
+					@media (min-width: $screen-md){
+						column-count: 2;
+						column-gap: 6rem;
+					}
+				}
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// partners
+	//--------------------------------------------------------------
+	.partners{
+		.section-wrapper{
+			@media (max-width: $screen-lg-max) {
+				@include grid-area(auto, 2);
+			}
+			
+			@media (min-width: $screen-xl){
+				@include grid-area-c(auto, 5, auto, calc(#{$grid} - 1));
+			}
+			
+			.inner-content{
+				max-width: 80%;
+				
+				.container-txt{
+					@media (min-width: $screen-lg){
+						max-width: 75%;
+					}
+				}
+				
+				+ .tabs-wrapper,
+				+ .tabs-wrapper + .wrapper-logo{
+					@include margin-small-top(2rem,6rem);
+				}
+			}
+			
+			.tabs-wrapper{
+				@media (min-width: $screen-md){
+					display: flex;
+				}
+				
+				.tabs-menu{
+					@media (min-width: $screen-md){
+						flex-direction: column;
+						width: 36rem;
+						height: 100%;
+					}
+					
+					li.tab-menu-item{
+						width: 100%;
+					}
+				}
+				
+				.tabs-content{
+					@media (min-width: $screen-md){
+						margin-top: 0;
+						padding-left: 6rem;
+						width: calc(100% - 36rem);
+					}
+				}
+			}
+			
+			.wrapper-logo ul{
+				@include reset-list;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				
+				@media (max-width: $screen-xs-max){
+					flex-direction: column;
+				}
+				
+				
+				li{
+					padding: 0 1rem;
+					
+					@media (max-width: $screen-xs-max){
+						margin-top: 2rem;
+						
+						&:first-of-type{
+							margin-top: 0;
+						}
+					}
+					
+					@media (min-width: $screen-md) and (max-width: $screen-md-max){
+						padding: 0 2rem;
+					}
+					
+					@media (min-width: $screen-lg) and (max-width: $screen-lg-max){
+						padding: 0 3rem;
+					}
+					
+					@media (min-width: $screen-xl){
+						padding: 0 4.5rem;
+					}
+					
+					
+					figure{
+						height: 4.5rem;
+						max-height: 4.5rem;
+						width: 100%;
+						max-width: 30rem;
+						
+						@media (min-width: $screen-md){
+						    height: 5.5rem;
+						    max-height: 5.5rem;
+						    max-width: 40rem;
+						}
+					
+						img{
+							@include object-fit(contain);
+						}
+					}
+				}
+			}
+			
+			.wrapper-btn{
+				display: flex;
+				justify-content: center;
+				margin-top: 2rem;
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// last news
+	//--------------------------------------------------------------
+	.last-news{
+		.section-wrapper{  
+			@media (min-width: $screen-md){
+				display: flex;
+			}
+			
+			@media (max-width: $screen-lg-max) {
+				@include grid-area(auto, 2);
+			}
+			
+			@media (min-width: $screen-xl) {
+				@include grid-area(auto, 4);
+			}
+			
+			.first-section{
+				@media (min-width: $screen-md){
+					@include padding-top;
+					flex: 1 0 55%;
+				}
+				
+				.big-news .card{
+					a figure{
+						@include fit-img-size(20rem,45rem);
+					}
+				}
+			}
+			
+			.other-news{
+				@media (min-width: $screen-md){
+					flex: 1 0 45%;
+					@include padding-small-left(2rem,6rem);
+				}
+			}
+			
+			.card{
+				@include margin-small-bottom($min-g-m-b,$max-g-m-b);
+			}
+			
+			.btn-mobile{
+				display: none;
+				
+				@media (max-width: $screen-sm-max){
+					display: block;
+					margin-left: auto;
+					text-align: right;
+				}
+			}
+			
+			.btn-desktop{
+				display: none;
+				
+				@media (min-width: $screen-md){
+					display: block;
+					margin-left: auto;
+					text-align: right;
+				}
+			}
+		}
+	}
+	
+	//--------------------------------------------------------------
+	// contact
+	//--------------------------------------------------------------
+	.contact{
+		.section-wrapper .inner-content{
+			color: white;
+			
+			@media (min-width: $screen-md){
+				display: flex;
+			}
+			
+			.text{
+				@media (max-width: $screen-sm-max){
+					@include margin-small-bottom;
+				}
+				
+				@media (min-width: $screen-md){
+					flex: 1 0 41%;
+				}
+				
+				+ .form{
+					@media (min-width: $screen-md){
+						@include padding-left;
+					}
+				}
+				
+				h2,
+				h3,
+				h4,
+				h5,
+				h6{
+					color: white;
+				}
+			}
+			
+			.form{
+				@media (min-width: $screen-md){
+					flex: 1 0 59%;
+				}
+				
+				input,
+				textarea,
+				select{
+					border-color: $bd-light-gray;
+					color: white;
+				}
+				
+				select{
+					filter: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(168%) hue-rotate(255deg) brightness(117%) contrast(100%);
+				}
+				
+				.submit-wrapper{					
+					input[type="submit"]{
+						color: $link-color;
+						
+						@media (hover: hover){
+							&:hover{
+								color: $link-hover;
+							}
+						}
+					}
+					
+					&:before{
+						background: $bg-dark;
+					}
+				}
+			}
+		}
+	}
+
+	#site-footer{
+		margin-top: 0;
+		
+		@media (min-width: $screen-lg){
+			min-height: 40rem;
+		}
+	}
+}

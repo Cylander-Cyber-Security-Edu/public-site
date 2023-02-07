@@ -1,0 +1,102 @@
+// -------------------------------------------------------------
+// Single pages
+// -- Single news
+// -------------------------------------------------------------
+
+// -------------------------------------------------------------
+// Single pages
+// -------------------------------------------------------------
+body.single {
+	#main-content > article {
+		&:after{
+			@include pattern;
+			top: 0;
+			right: 0;
+			transform: scale(-1);
+			
+			@media (max-width: $screen-md-max){
+				max-height: 40rem;
+                top: 5%;
+			}
+		}
+		
+		.hero {			
+			.page-header {
+				figure {
+					border-radius: 1rem;
+					position: relative;
+					@include fit-img-size(20rem,55rem);
+					
+					&:before{
+						content: "";
+						display: block;
+						height: 100%;
+						width: 100%;
+						background: rgba(40, 49, 133, 0.5);
+						background: -webkit-linear-gradient(0deg, rgba(40, 49, 133, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+						background: linear-gradient(0deg, rgba(40, 49, 133, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+						border-radius: 1rem;
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+					
+					img {
+						border-radius: 1rem;
+						@include object-fit();
+	                }
+	            }
+				
+	            + .page-content {
+					@include margin-small-top();
+	            }
+			}
+			
+			+ .page-body{
+				@include margin-top(2rem,9rem);
+				
+				.wrapper-page-body {
+					@media (max-width: $screen-md-max) {
+						@include grid-area(auto,2);
+					}
+					
+					@media (min-width: $screen-lg){
+						@include grid-area(auto,4);
+					}
+				}
+			}
+        }
+    }
+}
+
+// -------------------------------------------------------------
+// -- Single news
+// -------------------------------------------------------------
+body.single-post{
+	#main-content > article.post {
+		&:after{
+			@media (min-width: $screen-lg){
+				top: 30rem;
+				max-height: 40rem;
+			}
+			
+			@media (min-width: $screen-xxl){
+				top: 40rem;
+			}
+		}
+		
+		.page-body{
+			.inner-page-content{
+				.content p{
+					&:first-of-type{
+						font-weight: bold;
+					}
+				}
+				
+				+ .share{
+					@include margin-small-top;
+				}
+			}			
+		}
+	}
+}

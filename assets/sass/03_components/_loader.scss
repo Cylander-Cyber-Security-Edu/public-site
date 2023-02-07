@@ -1,0 +1,158 @@
+/* LOADER
+--------------------------------------------------------------*/
+// Global Loader
+// Ajax Loader
+// Ajax loader CF7
+// Loadmore BTN
+
+// Global Loader
+// -------------
+body.loading {
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		overflow: hidden;
+		position: fixed;
+		z-index: 8000;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $bg-blur;
+		backdrop-filter: $filter-blur;
+		height: 100%;
+		width: 100%;
+		@include transition-base();
+	}
+
+	&:after {
+		content: "";
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 5rem;
+		height: 5rem;
+		z-index: 9000;
+		background: url("img/loader.png") no-repeat 0 0;
+		animation: loader 0.8s steps(20) infinite;
+		background-size: cover;
+	}
+}
+
+// Ajax Loader
+// -------------
+.ajax-loader.loading {
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url("img/loader.png") no-repeat 0 0;
+	animation: loader 0.8s steps(20) infinite;
+	background-size: cover;
+}
+
+// Loader Ajax
+// -------------
+div.wpcf7 .ajax-loader {
+	margin-top: 0.4rem;
+	position: absolute;
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url("img/loader.png") no-repeat 0 0;
+	animation: loader 0.8s steps(20) infinite;
+	background-size: cover;
+}
+
+// Loadmore BTN
+// -------------
+.loadMoreWrapper {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+	position: relative;
+	@include margin-top(4rem, 6rem);
+
+	&.loading {
+		.btn {
+			opacity: 0;
+		}
+
+		.ajax-loader {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.btn {
+		margin-top: 0;
+		cursor: pointer;
+
+		&.infinite {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.ajax-loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: url("img/loader.png") no-repeat 0 0;
+		animation: loader 0.8s steps(20) infinite;
+		background-size: cover;
+		width: 2rem;
+		height: 2rem;
+		opacity: 0;
+		visibility: hidden;
+		@include transition-base();
+	}
+}
+
+// Loader input submit WPF7
+// -------------
+form.wpcf7-form {
+	&.submitting {
+		.wpcf7-submit {
+			color: transparent;
+		}
+
+		.wpcf7-spinner {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.wpcf7-spinner {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: url("img/loader.png") no-repeat 0 0;
+		animation: loader 0.8s steps(20) infinite;
+		background-size: cover;
+		width: 2rem;
+		height: 2rem;
+		@include transition-base();
+		margin: 0;
+		opacity: 0;
+		visibility: hidden;
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+// Animation
+// -------------
+@keyframes loader {
+	from {
+		background-position: 0 0%;
+	}
+
+	to {
+		background-position: 100% 0;
+	}
+}

@@ -1,0 +1,342 @@
+@import "variables-spacing.scss";
+@import "variables-header-footer.scss";
+
+// VARIABLES
+// -------------------------------------------------------------
+// Function Tint/Shade
+// Colors
+// Fonts family
+// Typo
+// Form
+// Image sizes
+// Screen sizes
+// -------------------------------------------------------------
+// Function to use TINT/SHADE for color
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
+
+// -------------------------------------------------------------
+// Colors
+// -------------------------------------------------------------
+// Branding
+$primary: #F49800;
+$secondary: #7C3B88;
+
+// Text
+$txt: #000000;
+$txt-light: #F6F6F6;
+$title: #283184;
+$tag: $secondary;
+
+// Link
+$link-color: $primary;
+$link-hover: #ED6D05;
+
+// Background
+$bg-light-gray: #f7f7f7;
+$bg-gray: #EBEBEB;
+$bg-dark: #0E0F32;
+$bg-color: $primary;
+
+// Border
+$bd-light-gray: #EBEBEB;
+$bd-gray: #a7a7a7;
+$bd-color: $primary;
+$bd-dark: #000000;
+
+
+// Blur
+$bg-blur: rgba($bg-gray, 0.9);
+$filter-blur: blur(0.4rem);
+
+// Errors
+$error-red: #ff6254;
+$error-green: #77b259;
+$error-orange: #ffba65;
+$error-blue: #5983b2;
+
+// Social
+$linkedin: #007ab9;
+$twitter: #55acee;
+$facebook: #3b5999;
+$messenger: #00b2ff;
+$whatsapp: #25d366;
+$vimeo: #1ab7ea;
+$youtube: #cd201f;
+$instagram: #e4405f;
+$pinterest: #bd081c;
+$tiktok: #00f2ea;
+
+// -------------------------------------------------------------
+// Fonts family
+// -------------------------------------------------------------
+@font-face {
+	font-family: "icomoon";
+	src: url("fonts/icomoon/fonts/icomoon.eot?yjlwmn");
+	src: url("fonts/icomoon/fonts/icomoon.eot?yjlwmn#iefix") format("embedded-opentype"),
+		url("fonts/icomoon/fonts/icomoon.ttf?yjlwmn") format("truetype"),
+		url("fonts/icomoon/fonts/icomoon.woff?yjlwmn") format("woff"),
+		url("fonts/icomoon/fonts/icomoon.svg?yjlwmn#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+$font-body: "canada-type-gibson", Helvetica, Arial, sans-serif;
+$font-title: "canada-type-gibson", Helvetica, Arial, sans-serif;
+$font-link: "gineso", Helvetica, Arial, sans-serif;
+$icons: "icomoon", Helvetica, Arial, sans-serif;
+
+// Just for BASE page to see different font weight used
+$font-body-weight: Book-300, Regular-400, Medium-500, SemiBold-600;
+$font-title-weight: Book-300, Regular-400, Medium-500, SemiBold-600;
+$font-link-weight: Book-400, Demi-700, Bold-800;
+
+// -------------------------------------------------------------
+// Typo
+// -------------------------------------------------------------
+// Fonts Ratio
+$min-font: 1.6rem;
+$max-font: 1.8rem;
+$lite-font: 1.4rem;
+
+// Nav
+$nav-mobile: 1.8rem;
+$nav-desktop: 2rem;
+
+// Sub nav
+$sub-nav-mobile: $min-font;
+$sub-nav-desktop: $min-font;
+
+// Languages
+$languages-mobile: $min-font;
+$languages-desktop: $max-font;
+
+// Search
+$search-mobile: $min-font;
+$search-desktop: $max-font;
+
+// Line height
+$line-height: 1.5;
+$line-height-title: 1.2;
+
+// -------------------------------------------------------------
+// Screen sizes
+// -------------------------------------------------------------
+$screen-xxs: 375px;
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xl: 1400px;
+$screen-xxl: 1600px;
+$screen-xxxl: 1800px;
+$screen-max: 2560px;
+$screen-xxxs-max: 374px;
+$screen-xxs-max: 479px;
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;
+$screen-lg-max: 1399px;
+$screen-xl-max: 1599px;
+$screen-xxl-max: 1799px;
+$screen-max-max: 2559px;
+
+// For calc clamp
+$screen-min-xxs: 37.5rem;
+$screen-max-xxxl: 180rem;
+
+// -------------------------------------------------------------
+// Form
+// -------------------------------------------------------------
+// Style
+$min-p-v-form: 1.5rem;
+$max-p-v-form: 2rem;
+
+$min-p-h-form: 1.5rem;
+$max-p-h-form: 2rem;
+
+$form-bck: transparent;
+$form-color: $title;
+$form-min_font: $min-font;
+$form-max_font: $max-font;
+$form-weight: 500;
+$form-lineheight: $line-height;
+$form-border: 0.1rem solid;
+$form-border-color: $bd-dark;
+$form-radius: 1rem;
+$form-radius-textarea: 1rem;
+$form-shadow: none;
+
+// Checkbox
+$form-check-bck: $link-color;
+$form-check-bck-checked: $link-hover;
+$form-check-border: 1px solid;
+$form-check-border-color: $link-color;
+$form-check-border-color-checked: $link-hover;
+$form-check-V: white;
+$form-check-V-checked: white;
+
+// Radio
+$form-radio-bck: $link-color;
+$form-radio-bck-checked: white;
+$form-radio-border: 4px solid;
+$form-radio-border-color: $link-color;
+$form-radio-border-color-checked: $link-hover;
+
+// Select
+$min-p-v-form-s: 1rem;
+$max-p-v-form-s: 2rem;
+
+$min-p-h-form-s: 2rem;
+$max-p-h-form-s: 3rem;
+
+$size-picto-select-w: 1.5rem;
+$size-picto-select-h: 8.5935rem;
+
+$factor-select: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-p-h-form-s - $min-p-h-form-s);
+$calc-value-select: unquote("#{$min-p-h-form-s - ( $screen-min-xxs * $factor-select)} + #{ 100vw * $factor-select}");
+$final-value-select: (
+	#{clamp(
+			#{if($min-p-h-form-s > $max-p-h-form-s, $max-p-h-form-s, $min-p-h-form-s)},
+			#{$calc-value-select},
+			#{if($min-p-h-form-s > $max-p-h-form-s, $min-p-h-form-s, $max-p-h-form-s)}
+		)}
+);
+$form-padding-right-select-fallback: calc((#{$min-p-h-form-s} * 2) + #{$size-picto-select-w});
+$form-padding-right-select: calc((#{$final-value-select} * 2) + #{$size-picto-select-w});
+
+// Date
+$min-p-v-form-d: 1rem;
+$max-p-v-form-d: 2rem;
+
+$min-p-h-form-d: 2rem;
+$max-p-h-form-d: 3rem;
+
+$size-picto-date-w: 2rem;
+$size-picto-date-h: 2rem;
+
+$factor-date: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-p-h-form-d - $min-p-h-form-d);
+$calc-value-date: unquote("#{$min-p-h-form-d - ( $screen-min-xxs * $factor-date)} + #{ 100vw * $factor-date}");
+$final-value-date: (
+	#{clamp(
+			#{if($min-p-h-form-d > $max-p-h-form-d, $max-p-h-form-d, $min-p-h-form-d)},
+			#{$calc-value-date},
+			#{if($min-p-h-form-d > $max-p-h-form-d, $min-p-h-form-d, $max-p-h-form-d)}
+		)}
+);
+$form-padding-right-date-fallback: calc((#{$min-p-h-form-d} * 2) + #{$size-picto-date-w});
+$form-padding-right-date: calc((#{$final-value-date} * 2) + #{$size-picto-date-w});
+
+// File
+$min-p-v-form-f: 1rem;
+$max-p-v-form-f: 2rem;
+
+$min-p-h-form-f: 2rem;
+$max-p-h-form-f: 3rem;
+
+$size-picto-file-w: 1.2rem;
+$size-picto-file-h: 1.2rem;
+
+$factor-file: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-p-h-form-f - $min-p-h-form-f);
+$calc-value-file: unquote("#{$min-p-h-form-f - ( $screen-min-xxs * $factor-file)} + #{ 100vw * $factor-file}");
+$final-value-file: (
+	#{clamp(
+			#{if($min-p-h-form-f > $max-p-h-form-d, $max-p-h-form-f, $min-p-h-form-f)},
+			#{$calc-value-file},
+			#{if($min-p-h-form-f > $max-p-h-form-d, $min-p-h-form-f, $max-p-h-form-f)}
+		)}
+);
+$form-padding-right-file-fallback: calc((#{$min-p-h-form-f} * 2) + #{$size-picto-file-w});
+$form-padding-right-file: calc((#{$final-value-file} * 2) + #{$size-picto-file-w});
+
+// Search
+$min-p-v-form-s: 1rem;
+$max-p-v-form-s: 2rem;
+
+$min-p-h-form-s: 2rem;
+$max-p-h-form-s: 3rem;
+
+$size-picto-search-w: 2rem;
+$size-picto-search-h: 2rem;
+
+$factor-search: 1 / ($screen-max-xxxl - $screen-min-xxs) * ($max-p-h-form-s - $min-p-h-form-s);
+$calc-value-search: unquote("#{$min-p-h-form-s - ( $screen-min-xxs * $factor-search)} + #{ 100vw * $factor-search}");
+$final-value-search: (
+	#{clamp(
+			#{if($min-p-h-form-s > $max-p-h-form-d, $max-p-h-form-s, $min-p-h-form-s)},
+			#{$calc-value-search},
+			#{if($min-p-h-form-s > $max-p-h-form-d, $min-p-h-form-s, $max-p-h-form-s)}
+		)}
+);
+$form-padding-right-search-fallback: calc((#{$min-p-h-form-f} * 2) + #{$size-picto-search-w});
+$form-padding-right-search: calc((#{$final-value-search} * 2) + #{$size-picto-search-w});
+
+// -------------------------------------------------------------
+// Video
+// -------------------------------------------------------------
+$video-play-size: 10rem;
+$arrow-width: 1rem;
+$arrow-height: 1.5rem;
+$video-bg-color: $primary;
+$video-arrow-color: white;
+
+// -------------------------------------------------------------
+// Image sizes
+// -------------------------------------------------------------
+// Bg-img / Fit-img : Height of img with class bg-img / fit img
+$min-img-height: 20rem;
+$max-img-height: 30rem;
+
+// Min-height
+$min-img-min-height: $min-img-height;
+$max-img-min-height: $max-img-height;
+
+// Picto-img : Height / Width of img with class picto-img
+$min-picto-width: 7.5rem;
+$max-picto-width: 15rem;
+
+$min-picto-height: 4rem;
+$max-picto-height: 5rem;
+
+
+//---------------------------------------------------------
+// Enlever 
+//---------------------------------------------------------
+// Flex background
+$bg-flex: $bg-light-gray; // For $bg-color
+$bg-site-flex: $primary; // For $bg-color-site
+
+// Color for Flex with $bg-color-site
+$color-flex: $txt;
+
+// - BTN
+$bg-btn-flex: $txt;
+$bg-btn-hover-flex: $link-hover;
+$txt-btn-flex: $secondary;
+$txt-btn-hover-flex: $secondary;
+
+// - Readmore
+$txt-readmore-flex: $txt;
+$txt-readmore-hover-flex: $link-hover;
+
+// - Link
+$link-flex: $txt;
+$link-hover-flex: $link-hover;
+
+// - List Link
+$link-list-flex: $txt;
+$link-list-hover-flex: $link-hover;
+
+// - Toggle
+$toggle-hover-flex: $link-hover;
+
+// - Border
+$border-flex: $link-hover;
+// Fin de Enlever 
+//---------------------------------------------------------

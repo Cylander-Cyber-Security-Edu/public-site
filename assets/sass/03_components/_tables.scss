@@ -1,0 +1,93 @@
+/* TABLE
+--------------------------------------------------------------*/
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border: 1px solid $bd-light-gray;
+	@include margin-small-bottom();
+
+	@media (max-width: $screen-xs-max) {
+		overflow-x: auto;
+		display: block;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	+ h1,
+	+ .h1,
+	+ h2,
+	+ .h2,
+	+ h3,
+	+ .h3,
+	+ h4,
+	+ .h4,
+	+ h5,
+	+ .h5,
+	+ h6,
+	+ .h6,
+	+ p {
+		margin-top: 4rem;
+	}
+
+	thead,
+	tbody,
+	tfoot {
+		td,
+		th {
+			padding: 1.2rem;
+			text-align: left;
+		}
+	}
+
+	thead {
+		th,
+		td {
+			font-weight: 700;
+			color: #fff;
+			background: $primary;
+			@include fluid-type(1.8rem, 2rem);
+		}
+	}
+
+	tbody {
+		tr {
+			&:not(:last-child) {
+				th,
+				td {
+					border-bottom: 1px solid $bd-light-gray;
+				}
+			}
+		}
+
+		th,
+		td {
+			border-top: 0;
+
+			@media (min-width: $screen-sm) {
+				&:not(:last-child) {
+					border-right: 1px solid $bd-light-gray;
+				}
+			}
+		}
+	}
+
+	tbody {
+		+ tfoot {
+			th,
+			td {
+				border-top: 1px solid $bd-light-gray;
+			}
+		}
+	}
+
+	tfoot {
+		th,
+		td {
+			font-weight: 700;
+			background: $bg-light-gray;
+		}
+	}
+}

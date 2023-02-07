@@ -1,0 +1,143 @@
+/* Pages default
+--------------------------------------------------------------*/
+// Global
+// All pages
+// Footer bottom page
+
+// -------------------------------------------------------------
+// Global
+// -------------------------------------------------------------
+body:not(.error404) {
+	#site-content {
+		@media (max-width: $screen-xxs-max) {
+			padding-top: $height-header; // exact same height as #site-header
+		}
+
+		@media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
+			padding-top: $xs-height-header;
+		}
+
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+			padding-top: $sm-height-header;
+		}
+
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			padding-top: $md-height-header;
+		}
+
+		@media (min-width: $screen-lg) and (max-width: $screen-lg-max) {
+			padding-top: $lg-height-header;
+		}
+
+		@media (min-width: $screen-xl) and (max-width: $screen-xl-max) {
+			padding-top: $xl-height-header;
+		}
+
+		@media (min-width: $screen-xxl) and (max-width: $screen-xxl-max) {
+			padding-top: $xxl-height-header;
+		}
+
+		@media (min-width: $screen-xxxl) {
+			padding-top: $xxxl-height-header;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// All pages
+// -------------------------------------------------------------
+.page:not(.home),
+.page-template-all-posts,
+.single{
+	// -- Site Hero
+	// -------------------------------------------------------------
+	.hero {
+		position: relative;
+		@include grid-columns();
+
+		.inner-hero {
+			@include margin-top(2rem, 6rem);
+			
+			@media (max-width: $screen-md-max) {
+				@include grid-area(auto,2);
+			}
+			
+			@media (min-width: $screen-lg){
+				@include grid-area(auto,3);
+			}
+		}
+
+		+ .page-body{
+			@include margin-top(2rem,6rem);
+			
+			.wrapper-page-body{
+				@include grid-area(auto,2);
+			}
+		}
+
+		.page-title {
+			margin-bottom: 0;
+			text-align: center;
+
+			+ .content {
+				@include margin-small-top();
+				text-align: center;
+			}
+		}
+	}
+
+	// -- Page body
+	// -------------------------------------------------------------
+	.page-body {
+		position: relative;
+		@include grid-columns();
+		
+		.wrapper-page-body{
+			@include grid-area();
+		}
+	}
+}
+
+.page:not(.home){
+	#site-content {
+		position: relative;
+		
+		&:after{
+			@include pattern;
+			height: 100vh;
+			top: 12rem;
+			right: 0;
+			background-size: contain;
+			
+			@media (min-width: $screen-md){
+				top: 15rem;
+			}
+		}
+	}
+}
+// -------------------------------------------------------------
+// - Footer bottom page
+// -------------------------------------------------------------
+#page {
+	display: grid;
+	// Change if more elements in #page (ex: auto 1f auto)
+	grid-template-rows: 1fr auto;
+}
+
+body.admin-bar {
+	#page {
+		@media (max-width: $screen-sm-max) {
+			min-height: calc(100vh - #{$admin-bar-sm});
+		}
+
+		@media (min-width: $screen-md) {
+			min-height: calc(100vh - #{$admin-bar});
+		}
+	}
+}
+
+body:not(.admin-bar) {
+	#page {
+		min-height: 100vh;
+	}
+}

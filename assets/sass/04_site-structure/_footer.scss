@@ -1,0 +1,355 @@
+/* Footer
+--------------------------------------------------------------*/
+// Global footer
+// Nav footer
+// Client infos
+// -- Site branding
+// -- Address
+// -- Social
+// Colophon
+// -- Credit
+// -- GDPR
+// -- Copyright
+// -- Logo Globule
+
+// -------------------------------------------------------------
+// Global footer
+// -------------------------------------------------------------
+#site-footer {
+	@include margin-top();
+	padding-bottom: 2rem;
+	align-self: flex-end;
+	background-color: $bg-dark;
+	color: $txt-light;
+
+	@media (min-width: $screen-sm) {
+		padding-bottom: 4rem;
+	}
+
+	.inner-footer {
+		@include grid-columns();
+		position: relative;
+		&:before {
+			content: "";
+			@include grid-area();
+			height: 1px;
+			background: $bd-light-gray;
+			opacity: 0.5;
+			@include margin-bottom();
+		}
+	}
+
+	#main-footer {
+		@include grid-area();
+
+		@media (min-width: $screen-sm) {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		@media (max-width: $screen-lg-max) {
+			@include grid-area(auto, 2);
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		@media (min-width: $screen-xl) {
+			@include grid-area(auto, 3);
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Nav footer
+// -------------------------------------------------------------
+#site-footer .wrapper-footer-menu {
+	@media (min-width: $screen-sm) {
+		flex: 0 1 33.33%;
+		padding-right: 2rem;
+	}
+	
+	@media (min-width: $screen-lg) {
+		flex: 0 0 25%;
+	}
+	
+	@media (min-width: $screen-xxl) {
+		flex: 0 0 40%;
+		padding-right: 0;
+	}
+
+	.menu-main-menu-container {
+		@media (min-width: $screen-xxl) {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+}
+
+#site-footer .footer-secondary-menu-wrapper {
+	@media (min-width: $screen-sm) {
+		flex: 1 0 33.33%;
+		padding-right: 2rem;
+	}
+	
+	@media (min-width: $screen-lg) {
+		flex: 0 0 25%;
+	}
+	
+	@media (min-width: $screen-xxl) {
+		flex: 0 0 20%;
+	}
+}
+
+#site-footer .footer-menu,
+#site-footer .top-menu {
+	@include reset-list();
+
+	> li {
+		+ li {
+			margin-top: 1rem;
+			@media (min-width: $screen-sm) {
+				margin-top: 2rem;
+			}
+		}
+		@media (max-width: $screen-xs-max) {
+			text-align: center;
+		}
+
+		> a {
+			display: table;
+			margin-top: 0;
+
+			font-family: $font-link;
+			@include transition-base();
+
+			@media (max-width: $screen-xs-max) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&:not(.readmore) {
+				color: $txt-light;
+
+				@media (hover: hover) {
+					&:hover {
+						color: $link-hover;
+					}
+				}
+			}
+		}
+	}
+}
+
+#site-footer .footer-menu {
+	@media (min-width: $screen-xxl) {
+		flex: 0 0 50%;
+		padding-right: 2rem;
+	}
+
+	> li {
+		> a {
+			font-weight: bold;
+		}
+	}
+
+	& + .footer-menu {
+		@media (max-width: $screen-md-max) {
+			margin-top: 2rem;
+		}
+		@media (max-width: $screen-xs-max) {
+			margin-top: 1rem;
+		}
+
+		@media (min-width: $screen-lg) and (max-width: $screen-xl-max) {
+			margin-top: 2rem;
+		}
+	}
+}
+
+#site-footer .top-menu {
+	@media (max-width: $screen-xs-max) {
+		margin-top: 1rem;
+	}
+
+	a.readmore {
+		@media (max-width: $screen-xs-max) {
+			margin-top: 0;
+		}
+	}
+}
+
+// -- Site branding
+// -------------------------------------------------------------
+#site-footer {
+	.info-client {
+		@media (max-width: $screen-md-max) {
+			margin-bottom: 4rem;
+			width: 100%;
+		}
+		@media (min-width: $screen-lg) {
+			flex: 0 0 25%;
+		}
+		@media (min-width: $screen-xxl) {
+			flex: 0 0 20%;
+		}
+	}
+	
+	.site-branding {
+		@media (max-width: $screen-md-max) {
+			display: flex;
+			justify-content: center;
+		}
+
+		a {
+			@include logo($site-name-logo-white, footer);
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+	// -- Social
+	// -------------------------------------------------------------
+	.social-container {
+		@media (max-width: $screen-xs-max) {
+			margin-top: 4rem;
+			margin-bottom: 1.2rem;
+		}
+		@media (min-width: $screen-sm) {
+			margin-left: 1.2rem;
+			margin-top: 3rem;
+		}
+
+		ul.gbl-social-menu {
+			@media (max-width: $screen-xs-max) {
+				justify-content: center;
+			}
+
+			li {
+				@include social-media($txt-light);
+				a {
+					position: relative;
+					&:before {
+						z-index: 1;
+					}
+					&:after {
+						content: "";
+						width: 4rem;
+						height: 4rem;
+						border-radius: 100%;
+						background: rgba($txt-light, 0.2);
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Colophon
+// -------------------------------------------------------------
+
+#site-footer #colophon {
+	font-size: $lite-font;
+
+	@media (max-width: $screen-xs-max) {
+		margin-top: 4rem;
+	}
+	@media (min-width: $screen-sm) {
+		flex: 0 1 33.33%;
+	}
+	@media (min-width: $screen-lg) {
+		flex: 0 0 25%;
+	}
+	@media (min-width: $screen-xxl) {
+		flex: 0 0 20%;
+	}
+	// Credit
+	// -------------------------------------------------------------
+	.credits-wrapper {
+		@media (max-width: $screen-xs-max) {
+			margin-top: 2rem;
+		}
+		.credit {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.5rem;
+
+			@media (min-width: $screen-sm) {
+				text-align: left;
+			}
+		}
+	}
+
+	// GDPR
+	// -------------------------------------------------------------
+	.gdpr-menu {
+		position: relative;
+		margin-top: 1rem;
+
+		@media (min-width: $screen-sm) {
+			margin-top: 1.5rem;
+		}
+		ul {
+			@include reset-list();
+
+			li {
+				position: relative;
+
+				@media (max-width: $screen-xs-max) {
+					text-align: center;
+					display: table;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				+ li {
+					margin-top: 0.7rem;
+
+					&:before {
+						display: none;
+					}
+				}
+
+				a {
+					display: table;
+					color: $txt-light;
+					font-family: $font-link;
+					letter-spacing: 0.2rem;
+					font-weight: bold;
+					font-size: 1.4rem;
+					@include transition-base();
+
+					@media (hover: hover) {
+						&:hover {
+							color: $link-hover;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Logo Globule
+	// -------------------------------------------------------------
+	.madebyglobule {
+		// For a light background
+		// @include madebyglobule();
+		// For a dark background
+		@include madebyglobule(footer-logo-globule-light, footer-love-globule-light);
+
+		@media (max-width: $screen-xs-max) {
+			margin: 2rem auto 0;
+		}
+
+		@media (min-width: $screen-sm) {
+			margin-top: 4rem;
+		}
+	}
+}

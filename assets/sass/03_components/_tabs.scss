@@ -1,0 +1,106 @@
+/* TABS
+--------------------------------------------------------------*/
+// Default and reset styles for tabs
+
+.tabs-wrapper {
+	.fade {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		transition: opacity 250ms linear;
+	}
+
+	.fade.in {
+		opacity: 1;
+		position: relative;
+		visibility: visible;
+		display: table;
+	}
+
+	.tabs-content {
+		margin-top: 2rem;
+
+		@media (min-width: $screen-md) {
+			margin-top: 4rem;
+		}
+	}
+
+	.tabs-menu {
+		@include reset-list();
+
+		@media (min-width: $screen-sm) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		li {
+			flex-grow: 1;
+			position: relative;
+			border-top: 1px solid $bd-light-gray;
+			display: flex;
+			width: 100%;
+		
+			&:first-child {
+				border-top: 0;
+				
+				a{
+					padding-top: 0;
+				}
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			a {
+				display: block;
+				text-align: left;
+				color: $txt;
+				letter-spacing: 4px;
+				text-transform: uppercase;
+				width: 100%;
+				font-weight: bold;
+				padding: 2rem 0;
+				@include transition-base();
+
+				span {
+					display: flex;
+					justify-content: space-between;
+					
+					&:after{
+						@include icon-svg("a", $txt, 1.4rem);
+						font-weight: bold;
+						padding-top: 0.5rem;
+						@include transition-base();
+						
+						@media (max-width: $screen-sm-max){
+							transform: rotate(90deg);
+						}
+					}
+				}
+			}
+
+			&.active {
+				a {
+					color: $link-color;
+					
+					span:after{
+						color: $link-color;
+					}
+				}
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					a {
+						color: $link-color;
+						
+						span:after{
+							color: $link-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+/* CP Default
+--------------------------------------------------------------*/
+article.card {
+    a{
+        color: $txt;
+        @include transition-base;
+        
+        @media (min-width: $screen-lg){
+            @media (hover: hover){
+                &:hover{
+                    figure img{
+                        transform: scale(1.10);
+                    }
+                    
+                    .content{
+                        color: $link-hover;
+                        
+                        footer{
+                            .fake-readmore:after{
+                                background-color: $link-hover;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    figure {
+        border-radius: 1rem 1rem 0 0;
+        position: relative;
+        overflow: hidden;
+        @include fit-img-size();
+        
+        &:before{
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: rgba(40, 49, 133, 0.3);
+            background: -webkit-linear-gradient(0deg,rgba(40,49,133,.5),hsla(0,0%,80%,.3) 100%);
+            background: linear-gradient(0deg,rgba(40,49,133,.5),hsla(0,0%,80%,.3) 100%);
+            border-radius: 1rem 1rem 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        img{
+            border-radius: 1rem 1rem 0 0;
+            @include object-fit();
+            @include transition-base;
+        }
+    }
+    
+    .content{
+        position: relative;
+        background-color: white;
+        border: 1px solid $bd-light-gray;
+        border-radius: 0 0 1rem 1rem;
+        @include padding-small(2rem,3rem);
+        @include transition-base;
+        
+        time {
+            display: block;
+        }
+        
+        .title{
+            @include margin-small-bottom(1rem,2rem);
+        }
+        
+        footer{
+            @media (min-width: $screen-lg){
+                position: absolute;
+                top: -8rem;
+                right: 2rem;
+            }
+        }
+    }
+}

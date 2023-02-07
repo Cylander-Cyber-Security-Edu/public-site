@@ -1,0 +1,48 @@
+/* IE OVERLAY component
+--------------------------------------------------------------*/
+#not-compatible-ie,
+#modal-ie{
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	z-index: 1000;
+	background-color: rgba($txt, 0.95);
+	display: none;
+
+	.modal-inner {
+		position: relative;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		background-color: white;
+		width: 90%;
+
+		@media (max-width: $screen-lg-max) {
+			padding: 4rem;
+		}
+
+		@media (min-width: $screen-md) {
+			width: 70%;
+		}
+
+		@media (min-width: $screen-xl) {
+			width: 50%;
+			padding: 6rem;
+		}
+	}
+}
+
+_:-ms-input-placeholder,
+:root {
+	body {
+		// overflow: hidden;
+
+		#modal-ie,
+		#not-compatible-ie {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,142 @@
+/* Overflow Nav
+--------------------------------------------------------------*/
+// If you use this navigation:
+// Comment nav-anim-overflow and uncomment nav-anim-push in style.scss
+
+#site-navigation {
+	#main-menu-toggle-wrapper {
+		@media (max-width: $screen-md-max) {
+			width: 100%;
+			visibility: hidden;
+			overflow: auto;
+			background: white;
+			z-index: 10;
+			position: fixed;
+			left: -100%;
+			@include transition-base();
+			-webkit-overflow-scrolling: touch; // smooth scroll on touch screen
+		}
+
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+			top: $md-height-header; // (HEIGHT of Header sticky or menu open)
+			height: calc(100vh - #{$md-height-header}); // (100vh - HEIGHT of Header sticky or menu open)
+			height: calc((var(--vh, 1vh) * 100) - #{$md-height-header});
+		}
+
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+			top: $sm-height-header;
+			height: calc(100vh - #{$sm-height-header});
+			height: calc((var(--vh, 1vh) * 100) - #{$sm-height-header});
+		}
+
+		@media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
+			top: $xs-height-header;
+			height: calc(100vh - #{$xs-height-header});
+			height: calc((var(--vh, 1vh) * 100) - #{$xs-height-header});
+		}
+
+		@media (max-width: $screen-xxs-max) {
+			top: $height-header;
+			height: calc(100vh - #{$height-header});
+			height: calc((var(--vh, 1vh) * 100) - #{$height-header});
+		}
+
+		.inner-toggle {
+			@media (max-width: $screen-md-max) {
+				@include grid-columns();
+
+				.secondary-menu-wrapper,
+				.primary-menu-wrapper {
+					@include grid-area();
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// When sticky
+// -------------------------------------------------------------
+body.sticky-menu {
+	#site-navigation {
+		#main-menu-toggle-wrapper {
+			@media (max-width: $screen-md-max) {
+				top: $height-sticky-header;
+				height: calc(100vh - #{$height-sticky-header});
+				height: calc((var(--vh, 1vh) * 100) - #{$height-sticky-header});
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Logged in
+// -------------------------------------------------------------
+body.admin-bar {
+	#site-navigation {
+		#main-menu-toggle-wrapper {
+			@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+				top: calc(#{$md-height-header} + #{$admin-bar-sm}); // (HEIGHT of Header + ADMINBAR)
+				height: calc(100vh - (#{$md-height-header} + #{$admin-bar-sm})); // (100vh - (HEIGHT of Header + ADMINBAR))
+				height: calc((var(--vh, 1vh) * 100) - (#{$md-height-header} + #{$admin-bar-sm}));
+			}
+
+			@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+				top: calc(#{$sm-height-header} + #{$admin-bar-sm});
+				height: calc(100vh - (#{$sm-height-header} + #{$admin-bar-sm}));
+				height: calc((var(--vh, 1vh) * 100) - (#{$sm-height-header} + #{$admin-bar-sm}));
+			}
+
+			@media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
+				top: calc(#{$xs-height-header} + #{$admin-bar});
+				height: calc(100vh - (#{$xs-height-header} + #{$admin-bar}));
+				height: calc((var(--vh, 1vh) * 100) - (#{$xs-height-header} + #{$admin-bar}));
+			}
+
+			@media (max-width: $screen-xxs-max) {
+				top: calc(#{$height-header} + #{$admin-bar});
+				height: calc(100vh - (#{$height-header} + #{$admin-bar}));
+				height: calc((var(--vh, 1vh) * 100) - (#{$height-header} + #{$admin-bar}));
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Mobile-menu open
+// -------------------------------------------------------------
+#site-navigation.toggled {
+	#main-menu-toggle-wrapper {
+		@media (max-width: $screen-md-max) {
+			visibility: visible;
+			left: 0;
+		}
+	}
+}
+
+// -------------------------------------------------------------
+// Body style
+// -------------------------------------------------------------
+body.menu-open {
+	@media (max-width: $screen-md-max) {
+		overflow: hidden;
+	}
+
+	#site-header {
+		// 3 - Remove background in nav-overflow.scss -> menu-open #site-header
+		// @media (max-width: $screen-md-max) {
+		// 	background-color: white;
+		// }
+	}
+
+	// 4 - Add css comment in nav-overflow.scss -> menu-open #site-header
+	&:not(.sticky-menu) {
+		#site-header {
+			@media (max-width: $screen-md-max) {
+				&:after {
+					right: 0;
+				}
+			}
+		}
+	}
+}

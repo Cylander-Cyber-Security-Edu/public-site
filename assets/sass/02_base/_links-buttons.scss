@@ -1,0 +1,176 @@
+/* Links buttons
+--------------------------------------------------------------*/
+// Link reset
+// Buttons and inputs
+// - Reset
+// - Styles
+// Read more style
+
+// -------------------------------------------------------------
+// Link reset
+// -------------------------------------------------------------
+a {
+	background-color: transparent;
+	color: $link-color;
+	text-decoration: none;
+	@include transition-base();
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			color: $link-hover;
+		}
+	}
+
+	img {
+		border: none;
+	}
+
+	+ p {
+		@include margin-bottom($min-m-p, $max-m-p);
+	}
+}
+
+// -------------------------------------------------------------
+// Buttons and inputs
+// -------------------------------------------------------------
+// - Reset
+button {
+	background-color: transparent;
+	font-family: $font-body;
+	text-transform: none;
+	line-height: $line-height;
+	@include fluid-type();
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	box-shadow: none;
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}
+
+// -------------------------------------------------------------
+// BTN
+// -------------------------------------------------------------
+a.btn,
+button.btn,
+.agree-button[data-consent="2"] {
+	@include btn();
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include btn();
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+// - inputs with wrapper
+.send,
+.input-wrapper,
+.submit-wrapper {
+	@include btn();
+	padding: 0;
+	display: table;
+
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		background: transparent;
+		margin: 0;
+		border: 0;
+	}
+}
+
+// -------------------------------------------------------------
+// Basic BTN
+// -------------------------------------------------------------
+button.btn-basic,
+a.btn-basic {
+	@include btn(true, true, true, $link-color, white, $link-hover);
+}
+
+// -------------------------------------------------------------
+// Read more style
+// -------------------------------------------------------------
+a.readmore,
+span.fake-readmore{
+	@include readmore();
+}
+
+span.fake-readmore{
+	@media (min-width: $screen-lg){
+		@include text-hide();
+		margin: 0;
+	}
+		
+	&:after{
+		@media (min-width: $screen-lg){
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 6rem;
+			width: 6rem;
+			margin: 0;
+			background-color: $link-color;
+			color: white;
+			border-radius: 999rem;
+		}	
+	}
+}
+
+
+// // -------------------------------------------------------------
+// // BTN back
+// // -------------------------------------------------------------
+// a.btnback {
+// 	@include btnback();
+// }
+
+// // -------------------------------------------------------------
+// // List links style
+// // -------------------------------------------------------------
+// a.listlink {
+// 	@include listlinks(">", $txt);
+// }
+
+// a.listlink[download] {
+// 	@include listlinks("D", $txt);
+// }

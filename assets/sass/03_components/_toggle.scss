@@ -1,0 +1,115 @@
+/* TOGGLE
+--------------------------------------------------------------*/
+// Default and reset styles for toggle
+
+.toggle-wrapper {
+	overflow: hidden;
+
+	.toggle-item {
+		overflow: hidden;
+
+		&:first-child {
+			input[type="checkbox"] + label {
+				padding-top: 0;
+			}
+		}
+
+		&:not(:last-child) {
+			input[type="checkbox"] + label {
+				padding-bottom: 1rem;
+				border-bottom: 1px solid $bd-light-gray;
+			}
+
+			.toggle-content .text {
+				padding-bottom: 1rem;
+			}
+		}
+
+		&.active {
+			.toggle-content {
+				opacity: 1;
+			}
+		}
+	}
+
+	input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+
+		&:checked {
+			+ label {
+				color: $primary;
+
+				&:after {
+					color: $primary;
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+
+	input[type="checkbox"] + label {
+		user-select: none;
+		padding-top: 1rem;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include transition-base();
+
+		&:after {
+			@include icon-svg(">", $txt, $lite-font);
+			transform: rotate(90deg);
+			@include transition-base();
+
+			// Remove checkbox style
+			// opacity: 1;
+			// position: relative;
+			// top: auto;
+			// width: auto;
+			// height: auto;
+			// left: auto;
+			// border: 0;
+			// background: transparent;
+		}
+
+		// Remove checkbox style
+		// &:before {
+		// 	content: none;
+		// }
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+
+				&:after {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	.toggle-content {
+		@include transition-base();
+		opacity: 0;
+
+		.text {
+			padding-top: 1rem;
+			padding-left: 0;
+			padding-right: 0;
+
+			img,
+			p img,
+			figure img {
+				// conflit avec le lazyload et le height auto
+				height: initial;
+			}
+		}
+	}
+}

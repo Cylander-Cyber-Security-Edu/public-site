@@ -1,0 +1,66 @@
+/* BREADCRUMB
+--------------------------------------------------------------*/
+
+body:not(.home) {
+	.breadcrumb {
+		@include grid-area();
+		@include padding-small-bottom(2rem, 6rem);
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		a,
+		span {
+			position: relative;
+			font-size: 1.6rem;
+			font-family: $font-link;
+			font-weight: 700;
+		}
+
+		a {
+			color: $title;
+			opacity: 0.6;
+
+			&:after {
+				@include icon-svg("a", $title, 1.2rem);
+				display: inline-block;
+				padding: 0 0.8rem;
+				line-height: 1;
+			}
+			
+			&:first-of-type{
+				&:before{
+					@include icon-svg("*", $title, 1.6rem);
+					display: inline-block;
+					margin-right: 0.8rem;
+					@include transition-base;
+				}
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					color: $link-hover;
+					opacity: 1;
+					
+					&:before{
+						color: $link-hover;
+					}
+				}
+			}
+		}
+
+		span {
+			color: $title;
+
+			&:not(:last-child) {
+				&:after {
+					@include icon-svg("a", $title, 1.2rem);
+					display: inline-block;
+					padding: 0 0.8rem;
+					line-height: 1;
+				}
+			}
+		}
+	}
+}
