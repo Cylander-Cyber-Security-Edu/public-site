@@ -21,7 +21,7 @@
           <div class="inner-content text">
             <h2>Our mission</h2>
             <div class="intro">
-              <p>Nowadays, digital technology allows us to connect with the world in an unprecedented way.</p>
+              <p>BLABLA, digital technology allows us to connect with the world in an unprecedented way.</p>
             </div>
             <p>All the while, everyone is struggling to attract and retain the right profiles to reinforce their respective cyber response teams. , Worldwide, 76% of organizations have difficulties recruiting and hiring cybersecurity professionals. What might be even more worrying: 44% of the cybersecurity professionals believe this shortage and its impact on their organization has gotten worse over the past five years. </p>
             <p>As the ‘new normal’ begins to take shape in the aftermath of the pandemic, now is the time to address this issue.</p>
