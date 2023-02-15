@@ -21,7 +21,7 @@
           <div class="inner-content text">
             <h2>Our mission</h2>
             <div class="intro">
-              <p>BLABLA, digital technology allows us to connect with the world in an unprecedented way.</p>
+              <p>Nowadays, digital technology allows us to connect with the world in an unprecedented way.</p>
             </div>
             <p>All the while, everyone is struggling to attract and retain the right profiles to reinforce their respective cyber response teams. , Worldwide, 76% of organizations have difficulties recruiting and hiring cybersecurity professionals. What might be even more worrying: 44% of the cybersecurity professionals believe this shortage and its impact on their organization has gotten worse over the past five years. </p>
             <p>As the ‘new normal’ begins to take shape in the aftermath of the pandemic, now is the time to address this issue.</p>
@@ -67,7 +67,7 @@
 
             <div class="row two" id="inform">
               <h3>Inform</h3>
-              <p> ING, Microsoft and the Open Web Application Security Project® (OWASP) have launched a common digital platform aimed at training future experts in IT risks and security. A unique partnership in the fight against cybercrime.
+              <p> ING, Microsoft, Null Pointer and the Open Web Application Security Project® (OWASP) have launched a common digital platform aimed at training future experts in IT risks and security. A unique partnership in the fight against cybercrime.
                 <br>The platform went live in April 2022 with the support of the Open Source Security Foundation (OSSF).
               </p>
               <p>The aim of this initiative is to remedy the structural shortage of skilled labor in the Risk and Security domains which, according to a recent study, impacts 57% of organisations in Belgium.</p>
@@ -80,7 +80,7 @@
               <ul>
                 <li>It will give future Risk & Security experts the chance to increase their employability by reaching a high standard of Risk & Security knowledge.</li>
                 <li>Companies worldwide will be able to overcome the shortage of cybersecurity professionals, because, thanks to the training track, there will be more skilled engineers in the market.</li>
-                <li>Together, as technology-driven companies who play a pivotal role in protecting society, we will help any sector, really, and society in general to tackle the threat of cyberattacks.</li>
+                <li>Together, as technology-driven companies who play a pivotal role in protecting society, we will help any sector and society in general to tackle the threat of cyberattacks.</li>
               </ul>
               <a href="https://secureby.design/auth/login" target="_blank" class="readmore">visit the training platform</a>
             </div>
