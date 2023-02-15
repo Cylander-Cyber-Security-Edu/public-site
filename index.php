@@ -67,7 +67,8 @@
 
             <div class="row two" id="inform">
               <h3>Inform</h3>
-              <p> ING, Microsoft, Null Pointer and the Open Web Application Security Project® (OWASP) have launched a common digital platform aimed at training future experts in IT risks and security. A unique partnership in the fight against cybercrime.
+              <p> ING, Microsoft, Null Pointer and the Open Web Application Security Project® (OWASP) have launched a common digital platform aimed at training future experts in IT risks and security. 
+		  A unique partnership in the fight against cybercrime.
                 <br>The platform went live in April 2022 with the support of the Open Source Security Foundation (OSSF).
               </p>
               <p>The aim of this initiative is to remedy the structural shortage of skilled labor in the Risk and Security domains which, according to a recent study, impacts 57% of organisations in Belgium.</p>
