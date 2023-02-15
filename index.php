@@ -108,7 +108,7 @@
           <div class="inner-content text">
             <h3>The future Short term</h3>
             <div class="col-text">
-              <p>Create awareness on a wider scale about cyber-security training track and get feedback about the learning profiles and curriculums of the 3 profiles. Increase the download metrics of the OWASP-SKF project with 50%. Long term: Via a certification process, reduce recruitment period by 50%. Once certified, the trained experts will form part of a "common pool" of qualified resources which any organisation will draw upon.</p>
+              <p>Create awareness on a wider scale about cyber-security training track and get feedback about the learning profiles and curriculums of the 3 profiles. Increase the download metrics of the ING-Null Pointer project with 50%. Long term: Via a certification process, reduce recruitment period by 50%. Once certified, the trained experts will form part of a "common pool" of qualified resources which any organisation will draw upon.</p>
               <p>Seeing high involvement from the open-source community and adding new materials and learning profiles/paths. Becoming the go-to-place for learning about AppSec security in the AppSec community. Create an inflow of new security testers inside partners’ companies to offer them a learning path to become a security professional in secure development, pentesting and ops-infra.</p>
             </div>
           </div>
