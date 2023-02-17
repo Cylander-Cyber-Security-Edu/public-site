@@ -213,7 +213,7 @@
           <div class="inner-content">
             <div class="text">
               <h4 class="h2">Contact us !</h4>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Three categories of Partners are proposed: Premium/Silver/Gold. Thanks to contact us to obtain additional information.
+              <p>Three categories of Partners are proposed: Premium/Silver/Gold. Thanks to contact us to obtain additional information.
 
             <div role="form" class="form" id="form" lang="en-US" dir="ltr">
               <form action="" method="post" class="" novalidate="novalidate" data-status="init">
