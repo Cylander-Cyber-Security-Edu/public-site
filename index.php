@@ -63,7 +63,8 @@
               <h3>Educate</h3>
               <p>At Cylander we strive to make our education materials accessible to everyone, regardless of their background or education level. This means using plain language and avoiding technical jargon wherever possible, as well as making our materials available in multiple formats, such as videos, infographics, and written guides. We also aim to make our education materials available in multiple languages to reach a broader audience.</p>
               <p>Also we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. For example, we may create education materials that target small businesses, depending on the needs of our target audience.</p>
-            </div>
+	      <p>we believe in the power of interactivity to engage learners and help them retain information. We aim to create education materials that allow learners to actively engage with the content, whether through quizzes, simulations, or other interactive elements. By incorporating interactivity into our education materials, we can help learners develop practical cybersecurity skills and build confidence in their ability to protect themselves against cyber threats.</p>
+	    </div>
 
             <div class="row two" id="inform">
               <h3>Inform</h3>
