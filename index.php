@@ -61,8 +61,8 @@
             </div>
             <div class="row one" id="educate">
               <h3>Educate</h3>
-              <p>Our main goal is to educate as many people as possible and to make Cybersecurity accessible in our daily lives.</p>
-              <p>Let’s demystify the word ! from a complex topic to put in place into a daily reflex.</p>
+              <p>At Cylander we strive to make our education materials accessible to everyone, regardless of their background or education level. This means using plain language and avoiding technical jargon wherever possible, as well as making our materials available in multiple formats, such as videos, infographics, and written guides. We also aim to make our education materials available in multiple languages to reach a broader audience.</p>
+              <p>Also we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. For example, we may create education materials that target small businesses, depending on the needs of our target audience.</p>
             </div>
 
             <div class="row two" id="inform">
