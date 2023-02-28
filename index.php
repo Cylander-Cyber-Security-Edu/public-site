@@ -57,7 +57,7 @@
           <div class="row-wrapper text">
             <div class="inner-content">
               <h2>Range of action</h2>
-              <p>Our approach to creating education materials is centered around three key principles: accessibility, relevance, and interactivity.</p>
+              <p><strong>Our approach to creating education materials is centered around three key principles: accessibility, relevance, and interactivity.</strong></p>
             </div>
             <div class="row one" id="educate">
               <h3>Accessibility</h3>
