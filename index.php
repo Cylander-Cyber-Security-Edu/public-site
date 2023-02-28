@@ -227,7 +227,7 @@
                   <span class="span-gdpr">
                     <label>
                       <input type="checkbox" name="gdpr" value="1" aria-invalid="false">
-                      <span class="label label-gdpr">I have read and accept <a href="#" target="_blank">Terms of use</a> and <a href="#" target="_blank">Privacy policy</a> and also agree to be contacted.</span>
+                      <span class="label label-gdpr">I have read and accept <a href="/privacy.php" target="_blank">Privacy policy</a> and also agree to be contacted.</span>
                     </label>
                   </span>
                 </div>
