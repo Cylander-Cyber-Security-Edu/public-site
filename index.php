@@ -102,7 +102,7 @@
           <div class="inner-content text">
             <h3>The future Short term</h3>
             <div class="col-text">
-              <p>In the short term, Cylander aims to create widespread awareness of our free cybersecurity education materials and gather feedback on the learning profiles and curricula for our three profiles. We will work to engage with the open-source community and continue to develop new materials and learning paths to meet the evolving needs of our audience. By fostering a culture of cybersecurity awareness and education, we can help individuals and organizations build the knowledge and skills they need to protect themselves against cyber threats.</p>
+              <p>Cylander aims to create widespread awareness of our free cybersecurity education materials and gather feedback on the learning profiles and curricula for our three profiles. We will work to engage with the open-source community and continue to develop new materials. By fostering a culture of cybersecurity awareness and education, we can help individuals and organizations build the knowledge and skills they need to protect themselves against cyber threats.</p>
               <p>Overall, our short-term objectives align with our mission of promoting free cybersecurity knowledge and our vision of a safer and more secure digital environment for all. By pursuing these objectives, we can make a meaningful impact on the cybersecurity landscape and help individuals and organizations build resilience against cyber threats.</p>
             </div>
           </div>
