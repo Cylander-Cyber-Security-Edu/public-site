@@ -102,8 +102,8 @@
           <div class="inner-content text">
             <h3>The future Short term</h3>
             <div class="col-text">
-              <p>Create awareness on a wider scale about cyber-security training track and get feedback about the learning profiles and curriculums of the 3 profiles. Increase the download metrics of the ING-Null Pointer project with 50%. Long term: Via a certification process, reduce recruitment period by 50%. Once certified, the trained experts will form part of a "common pool" of qualified resources which any organisation will draw upon.</p>
-              <p>Seeing high involvement from the open-source community and adding new materials and learning profiles/paths. Becoming the go-to-place for learning about AppSec security in the AppSec community. Create an inflow of new security testers inside partners’ companies to offer them a learning path to become a security professional in secure development, pentesting and ops-infra.</p>
+              <p>In the short term, Cylander aims to create widespread awareness of our free cybersecurity education materials and gather feedback on the learning profiles and curricula for our three profiles. We will work to engage with the open-source community and continue to develop new materials and learning paths to meet the evolving needs of our audience. By fostering a culture of cybersecurity awareness and education, we can help individuals and organizations build the knowledge and skills they need to protect themselves against cyber threats.</p>
+              <p>Overall, our short-term objectives align with our mission of promoting free cybersecurity knowledge and our vision of a safer and more secure digital environment for all. By pursuing these objectives, we can make a meaningful impact on the cybersecurity landscape and help individuals and organizations build resilience against cyber threats.</p>
             </div>
           </div>
         </div>
