@@ -57,32 +57,25 @@
           <div class="row-wrapper text">
             <div class="inner-content">
               <h2>Range of action</h2>
-              <p>As a foundation dedicated to Cyber Security, our action is deployed in 3 structuring axes, for better protection of companies and citizens.</p>
+              <p>Our approach to creating education materials is centered around three key principles: accessibility, relevance, and interactivity.</p>
             </div>
             <div class="row one" id="educate">
-              <h3>Educate</h3>
-              <p>At Cylander we strive to make our education materials accessible to everyone, regardless of their background or education level. This means using plain language and avoiding technical jargon wherever possible, as well as making our materials available in multiple formats, such as videos, infographics, and written guides. We also aim to make our education materials available in multiple languages to reach a broader audience.</p>
-              <p>Also we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. For example, we may create education materials that target small businesses, depending on the needs of our target audience.</p>
-	      <p>we believe in the power of interactivity to engage learners and help them retain information. We aim to create education materials that allow learners to actively engage with the content, whether through quizzes, simulations, or other interactive elements. By incorporating interactivity into our education materials, we can help learners develop practical cybersecurity skills and build confidence in their ability to protect themselves against cyber threats.</p>
+              <h3>Accessibility</h3>
+              <p>First, we strive to make our education materials accessible to everyone, regardless of their background or education level. This means using plain language and avoiding technical jargon wherever possible, as well as making our materials available in multiple formats, such as videos, infographics, and written guides. We also aim to make our education materials available in multiple languages to reach a broader audience.</p>
 	    </div>
 
             <div class="row two" id="inform">
-              <h3>Inform</h3>
-              <p> ING, Microsoft, Null Pointer and the Open Web Application Security Project® (OWASP) have launched a common digital platform aimed at training future experts in IT risks and security. 
-		  A unique partnership in the fight against cybercrime.
-                <br>The platform went live in April 2022 with the support of the Open Source Security Foundation (OSSF).
-              </p>
-              <p>The aim of this initiative is to remedy the structural shortage of skilled labor in the Risk and Security domains which, according to a recent study, impacts 57% of organisations in Belgium.</p>
-              <p>The partnership was announced at the November 2021 “Risk & Security Conference (ING Meetup)” in the presence of Minister for Justice, Vincent Van Quickenborne.</p>
+              <h3>Relevance</h3>
+              <p>Second, we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. For example, we may create education materials that target small businesses or individuals, depending on the needs of our target audience.</p>
             </div>
 
             <div class="row three" id="train">
-              <h3>Train</h3>
-              <p><strong>Cylander is adding value at three levels:</strong></p>
-              <ul>
-                <li>It will give future Risk & Security experts the chance to increase their employability by reaching a high standard of Risk & Security knowledge.</li>
-                <li>Companies worldwide will be able to overcome the shortage of cybersecurity professionals, because, thanks to the training track, there will be more skilled engineers in the market.</li>
-                <li>Together, as technology-driven companies who play a pivotal role in protecting society, we will help any sector and society in general to tackle the threat of cyberattacks.</li>
+              <h3>Interactivity</h3>
+              <p>Third, we believe in the power of interactivity to engage learners and help them retain information. We aim to create education materials that allow learners to actively engage with the content, whether through quizzes, simulations, or other interactive elements. By incorporating interactivity into our education materials, we can help learners develop practical cybersecurity skills and build confidence in their ability to protect themselves against cyber threats.
+	      <ul>
+                <li>To create our education materials, we work with a team of cybersecurity experts and educators who bring a diverse range of perspectives and experiences to the table. We also engage with stakeholders from different sectors, such as government agencies, non-profits, and private companies, to ensure that our education materials reflect the latest best practices and are relevant to the needs of different audiences.
+
+ <li>Overall, our approach to creating education materials is grounded in our commitment to providing free and accessible cybersecurity knowledge to individuals and organizations. We believe that by creating engaging and relevant education materials, we can help people build the knowledge and skills they need to protect themselves against cyber threats and contribute to a safer and more secure digital environment for all.</li>
               </ul>
               <a href="https://secureby.design/auth/login" target="_blank" class="readmore">visit the training platform</a>
             </div>
