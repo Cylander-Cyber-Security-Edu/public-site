@@ -9,7 +9,7 @@
       <div class="section-wrapper">
         <header class="page-header">
           <div class="page-content">
-            <h1>Cylander is a <strong>non profit association</strong> dedicated to <span>Cyber Security Knowledge</span></h1>
+            <h1>Cylander is a <strong>non profit association</strong> dedicated to provide and produce free <span>Cyber Security Knowledge</span></h1>
           </div><!-- .page-content -->
         </header>
       </div>
@@ -21,11 +21,11 @@
           <div class="inner-content text">
             <h2>Our mission</h2>
             <div class="intro">
-              <p>Nowadays, digital technology allows us to connect with the world in an unprecedented way.</p>
+              <p>At Cylander, we envision a world where individuals and organizations have free access to comprehensive cybersecurity knowledge and resources, empowering them to protect themselves against cyber threats and contribute to a safer digital environment for all. We believe that cybersecurity is a fundamental right that should be accessible to everyone, regardless of their background, education, or resources.</p>
             </div>
-            <p>All the while, everyone is struggling to attract and retain the right profiles to reinforce their respective cyber response teams. , Worldwide, 76% of organizations have difficulties recruiting and hiring cybersecurity professionals. What might be even more worrying: 44% of the cybersecurity professionals believe this shortage and its impact on their organization has gotten worse over the past five years. </p>
-            <p>As the ‘new normal’ begins to take shape in the aftermath of the pandemic, now is the time to address this issue.</p>
-            <p>Throughout the trajectory, we want to encourage as many actors as possible to join us. Because, only by working together, with private and public partners, we will be able to deploy and scale the full range of capabilities needed to fight cybercrime. It is our joint responsibility to prepare for the digital transition of the next decade.</p>
+            <p>We envision a world where people are aware of the risks posed by cyber threats and are equipped with the knowledge and tools to mitigate them. We believe that cybersecurity education is critical in building a more resilient society that can withstand the evolving threat landscape of the digital age.</p>
+            <p>We see cybersecurity as a collective responsibility that extends beyond individuals and organizations to encompass society as a whole. We believe that by promoting free access to cybersecurity knowledge and resources, we can help create a safer and more secure digital environment for all, fostering trust and confidence in the digital technologies that are transforming the world.</p>
+            <p>Through our commitment to free cybersecurity knowledge, we aim to break down barriers and empower individuals and organizations to protect themselves against cyber threats, fostering a culture of cybersecurity that values prevention, detection, and response. We believe that by working together, we can build a better, more secure digital future for all.</p>
           </div>
 
           <div class="inner-picture">
