@@ -62,20 +62,17 @@
             <div class="row one" id="educate">
               <h3>Accessibility</h3>
               <p>First, we strive to make our education materials accessible to everyone, regardless of their background or education level. This means using plain language and avoiding technical jargon wherever possible, as well as making our materials available in multiple formats, such as videos, infographics, and written guides. We also aim to make our education materials available in multiple languages to reach a broader audience.</p>
-	    </div>
-
+	          </div>
             <div class="row two" id="inform">
               <h3>Relevance</h3>
               <p>Second, we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. For example, we may create education materials that target small businesses or individuals, depending on the needs of our target audience.</p>
             </div>
-
             <div class="row three" id="train">
               <h3>Interactivity</h3>
               <p>Third, we believe in the power of interactivity to engage learners and help them retain information. We aim to create education materials that allow learners to actively engage with the content, whether through quizzes, simulations, or other interactive elements. By incorporating interactivity into our education materials, we can help learners develop practical cybersecurity skills and build confidence in their ability to protect themselves against cyber threats.
-	      <ul>
+	            <ul>
                 <li>To create our education materials, we work with a team of cybersecurity experts and educators who bring a diverse range of perspectives and experiences to the table. We also engage with stakeholders from different sectors, such as government agencies, non-profits, and private companies, to ensure that our education materials reflect the latest best practices and are relevant to the needs of different audiences.
-
- <li>Overall, our approach to creating education materials is grounded in our commitment to providing free and accessible cybersecurity knowledge to individuals and organizations. We believe that by creating engaging and relevant education materials, we can help people build the knowledge and skills they need to protect themselves against cyber threats and contribute to a safer and more secure digital environment for all.</li>
+                <li>Overall, our approach to creating education materials is grounded in our commitment to providing free and accessible cybersecurity knowledge to individuals and organizations. We believe that by creating engaging and relevant education materials, we can help people build the knowledge and skills they need to protect themselves against cyber threats and contribute to a safer and more secure digital environment for all.</li>
               </ul>
               <a href="https://secureby.design/auth/login" target="_blank" class="readmore">visit the training platform</a>
             </div>
@@ -90,8 +87,7 @@
               <svg class="svg-mask" viewBox="0 0 599.8 762.4">
                 <defs>
                   <clipPath id="clipPath-1" class="clipPath">
-                    <path d="M599.8,0L299.9,44.7L0,0v415.3c0,111.4,60.3,214,157.7,268.1l142.2,79l142.2-79
-	c97.3-54.1,157.7-156.7,157.7-268.1V0z" />
+                    <path d="M599.8,0L299.9,44.7L0,0v415.3c0,111.4,60.3,214,157.7,268.1l142.2,79l142.2-79c97.3-54.1,157.7-156.7,157.7-268.1V0z" />
                   </clipPath>
                 </defs>
                 <image class="svg-clipped" preserveAspectRatio="xMinYMin slice" width="100%" height="500" xlink:href="/img/men-work-for-future-security.jpg" />
