@@ -93,9 +93,7 @@
                 <div class="menu-main-menu-container">
                   <ul id="primary-menu" class="primary-menu nav-menu" aria-expanded="false">
                     <li class="menu-item"><a href="/#our-mission">Our mission</a></li>
-                    <li class="menu-item"><a href="/#educate">Educate</a></li>
-                    <li class="menu-item"><a href="/#inform">Inform</a></li>
-                    <li class="menu-item"><a href="/#train">Train</a></li>
+                    <li class="menu-item"><a href="/#educate">Actions</a></li>
                     <li class="menu-item"><a href="/#the-future-short-term">The future Short term</a></li>
                     <li class="menu-item"><a href="/#partners">Partners</a></li>
                     <li class="menu-item"><a href="/#contact">Contact</a></li>
