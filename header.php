@@ -37,8 +37,8 @@
       "@type": "Organization",
       "name": "Cylander",
       "url": "http://cylander.be/",
-      "image": "http://cylander.be/img/logo-cylander.svg",
-      "logo": "http://cylander.be/img/logo-cylander.svg",
+      "image": "http://cylander.be/assets/img/logo-cylander.svg",
+      "logo": "http://cylander.be/assets/img/logo-cylander.svg",
       "description": "Cylander is a non profit association dedicated to Cyber Security Knowledge",
       "telephone": "",
       "address": {
