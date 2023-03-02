@@ -19,8 +19,8 @@
 			<div class="page-body">
 				<div class="wrapper-page-body">
 					<div class="inner-page-content">
-						<time>10/12/2022</time>
-						<h1 class="page-title">During the Risk & Security Conference in November 2021</h1>
+						<time>02/03/2023</time>
+						<h1 class="page-title">During the Risk & Security Conference in November 2022</h1>
 						<div class="content text">
 							<p>During the ING conference, we announced that together with ING & Null Pointer will start an online and open source Risk and Security training track. ING -  first bank ever in Europe to broadly open its doors to external partnerships to create The Risk and Security Training Track.</p>
 							<p>The successful implementation of this new way of training people will be the result of a close collaboration with the open source community</p>
