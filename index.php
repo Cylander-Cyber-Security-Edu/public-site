@@ -184,7 +184,7 @@
           <div class="first-section text">
             <h4 class="h3">The latest news</h4>
             <div class="big-news">
-              <?php include "news-cylander-creation" ?>
+              <?php include "content-news.php" ?>
             </div>
             <a href="/all-news.php" class="readmore btn-desktop">Discover all news</a>
           </div>

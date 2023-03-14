@@ -36,9 +36,9 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Cylander",
-      "url": "http://cylander.be/",
-      "image": "http://cylander.be/assets/img/logo-cylander.svg",
-      "logo": "http://cylander.be/assets/img/logo-cylander.svg",
+      "url": "https://cylander.be/",
+      "image": "https://cylander.be/assets/img/logo-cylander.svg",
+      "logo": "https://cylander.be/assets/img/logo-cylander.svg",
       "description": "Cylander is a non profit association dedicated to Cyber Security Knowledge",
       "telephone": "",
       "address": {
@@ -50,7 +50,7 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "",
+        "latitude": "",n
         "longitude": ""
       },
       "contactPoint": {
