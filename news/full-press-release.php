@@ -7,7 +7,7 @@
 		<article class="post type-post">
 			<div class="hero">
 				<div class="inner-hero">
-					<div class="breadcrumb"><a href="/index">Home</a> <a href="/all-news">News</a> <span>Single news</span></div>
+					<div class="breadcrumb"><a href="/index.php">Home</a> <a href="/all-news.php">News</a> <span>Single news</span></div>
 					<header class="page-header">
 						<figure class="u-photo">
 							<img src="/news/img/defaut.jpg" alt="cylander img defaut">

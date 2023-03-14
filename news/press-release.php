@@ -1,5 +1,5 @@
 <article class="card">
-	<a href="/news/full-press-release" title="Read this article">
+	<a href="/news/full-press-release.php" title="Read this article">
 		<header class="post-header">
 			<figure class="u-photo">
 				<img src="/img/defaut.jpg" alt="cylander img defaut">

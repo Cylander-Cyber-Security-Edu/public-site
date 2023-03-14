@@ -18,14 +18,9 @@
 			<div class="page-body">
 				<div class="wrapper-page-body">
 					<div class="wrapper-grid card-wrapper">
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
-						<?php include "content-news.php" ?>
+						<?php include "news/cylander-website-live.php" ?>
+						<?php include "news/press-release.php" ?>
+						<?php include "news/content-news.php" ?>
 					</div>
 				</div>
 			</div>
