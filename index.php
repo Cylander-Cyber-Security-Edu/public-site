@@ -191,7 +191,7 @@
 
           <div class="other-news">
             <?php include "news/content-news.php" ?>
-            <?php include "news/full-press-release.php" ?>
+            <?php include "news/press-release.php" ?>
           </div>
           <a href="/all-news.php" class="readmore btn-mobile">Discover all news</a>
         </div>
