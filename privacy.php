@@ -7,14 +7,14 @@
 		<article class="post type-post">
 			<div class="hero">
 				<div class="inner-hero">
-					<div class="breadcrumb"><a href="/index.php">Home</a> <span>Privacy Statement</span></div>
+					<div class="breadcrumb"><a href="/index.php">Home</a> <span>Privacy Policy</span></div>
 				</div><!-- .inner-hero -->
 			</div><!-- .hero -->
 
 			<div class="page-body">
 				<div class="wrapper-page-body">
 					<div class="inner-page-content">
-						<h1 class="page-title">Privacy Statement</h1>
+						<h1 class="page-title">Privacy Policy</h1>
 						<div class="content text">
 							<p>At Cylander, we are committed to protecting your privacy and the confidentiality of your personal information. This Privacy Statement explains how we collect, use, and disclose personal information in connection with our website and our mission to promote free cybersecurity knowledge.</p>
               				<p>Information We Collect: We collect personal information that you provide to us voluntarily when you register for an account, sign up for our newsletter, or contact us through our website. This information may include your name, email address, job title, and other contact information. We may also collect information automatically through the use of cookies and other tracking technologies.</p>

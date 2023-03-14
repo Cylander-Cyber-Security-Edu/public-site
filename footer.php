@@ -53,8 +53,7 @@
           <div class="gdpr-menu">
             <div class="menu">
               <ul>
-                <li class=""><a href="/single.php">Terms and conditions </a></li>
-                <li class=""><a href="/single.php">Privacy Policy</a></li>
+                <li class=""><a href="/privacy.php">Privacy Policy</a></li>
                 <li class=""><a href="/single.php">Cookie policy</a></li>
               </ul>
             </div>
