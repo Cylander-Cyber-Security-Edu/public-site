@@ -1,5 +1,5 @@
 <?php $class = "single single-post" ?>
-<?php include "header.php" ?>
+<?php include "../header.php" ?>
 
 <div id="site-content">
 	<!-- #main -->
@@ -52,4 +52,4 @@
 
 	</main><!-- #main -->
 </div>
-<?php include "footer.php" ?>
+<?php include "../footer.php" ?>
