@@ -184,14 +184,14 @@
           <div class="first-section text">
             <h4 class="h3">The latest news</h4>
             <div class="big-news">
-              <?php include "content-news.php" ?>
+              <?php include "news/cylander-website-live.php" ?>
             </div>
             <a href="/all-news.php" class="readmore btn-desktop">Discover all news</a>
           </div>
 
           <div class="other-news">
-            <?php include "content-news.php" ?>
-            <?php include "content-news.php" ?>
+            <?php include "news/content-news.php" ?>
+            <?php include "news/content-news.php" ?>
           </div>
           <a href="/all-news.php" class="readmore btn-mobile">Discover all news</a>
         </div>
