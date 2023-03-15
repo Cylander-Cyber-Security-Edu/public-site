@@ -76,8 +76,15 @@
       <div class="modal-content">
         <div class="text">
           <h2>Why become a partner ?</h2>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+          <p>Become a Partner with Cylander: Join the Revolution in Cybersecurity Education</p>
+          <p>Are you as passionate about cybersecurity as we are? At Cylander, we're on a mission to create a world where comprehensive cybersecurity knowledge and resources are accessible to all, and we need your help to make this a reality. By becoming a partner, you'll be joining a movement that is dedicated to empowering individuals and organizations in the fight against cyber threats.</p>
+          <p>Here's why partnering with Cylander is a smart move for you:</p>
+          <p><strong>1. Align with a Noble Cause:</strong> By partnering with us, you'll be part of a global mission to make cybersecurity a fundamental right for everyone, irrespective of their background, education, or resources. You'll help to create a safer digital environment, promoting trust and confidence in the digital technologies that are transforming the world.</p>
+          <p><strong>2. Foster a Resilient Society:</strong> As a Cylander partner, you'll contribute to building a society that is better equipped to withstand the evolving threat landscape of the digital age. You'll be supporting cybersecurity education that empowers people to mitigate cyber threats and contribute to a secure digital future.</p>
+          <p><strong>3. Demonstrate Corporate Responsibility:</strong> Show your customers and stakeholders that your organization is committed to making a positive impact on society. By supporting our cause, you'll be fulfilling your corporate responsibility by contributing to a more secure digital environment for all.</p>
+          <p><strong>4. Enhance Brand Visibility:</strong> As a partner, you'll benefit from increased brand exposure and visibility. Associating your brand with a forward-thinking cybersecurity initiative will help you stand out in the market and attract customers who value security and trust.</p>
+          <p><strong>5. Network with Industry Leaders:</strong> Join a community of like-minded organizations and individuals who share your passion for cybersecurity. As a partner, you'll have the opportunity to network with industry leaders, engage in knowledge-sharing, and collaborate on initiatives that drive change in the cybersecurity landscape.</p>
+          <p>Become a partner with Cylander today and help us to break down barriers, empower individuals and organizations, and foster a culture of cybersecurity that values prevention, detection, and response. Together, we can build a better, more secure digital future for all. Don't miss out on this incredible opportunity to make a lasting impact – join us now!</p>
         </div>
 
         <div role="form" class="form" id="form" lang="en-US" dir="ltr">

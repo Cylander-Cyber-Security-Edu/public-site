@@ -110,45 +110,73 @@
         <div class="inner-content text">
           <h3>Why become a partner ?</h3>
           <div class="container-txt">
-            <p>A partnership with Cylander places your company in a positive societal dynamic, while bringing you business advantages. Here is how :</p>
+            <p>Join Cylander as a partner to champion accessible cybersecurity education, foster a resilient society, and make a lasting impact. Help create a safer digital environment, enhance brand visibility, and network with industry leaders. Together, we'll build a secure digital future for all.</p>
           </div>
         </div>
 
         <div class="tabs-wrapper onscreen">
           <ul class="tabs-menu" role="tablist">
             <li class="tab-menu-item active in">
-              <a class="nav-link" href="#social-level">
-                <span>Social Level</span>
+              <a class="nav-link" href="#1">
+                <span>Align with a Noble Cause</span>
               </a>
             </li>
             <li class="tab-menu-item">
-              <a class="nav-link" href="#corpo-level">
-                <span>Corporate Level</span>
+              <a class="nav-link" href="#2">
+                <span>Foster a Resilient Society</span>
               </a>
             </li>
             <li class="tab-menu-item">
-              <a class="nav-link" href="#certif">
-                <span>Certification process</span>
+              <a class="nav-link" href="#3">
+                <span>Demonstrate Corporate Responsibility</span>
+              </a>
+            </li>
+            <li class="tab-menu-item">
+              <a class="nav-link" href="#4">
+                <span>Enhance Brand Visibility</span>
+              </a>
+            </li>
+            <li class="tab-menu-item">
+              <a class="nav-link" href="#5">
+                <span>Network with Industry Leaders</span>
               </a>
             </li>
           </ul>
           <div class="tabs-content">
-            <div class="tabs-item text fade active in" id="social-level">
+            <div class="tabs-item text fade active in" id="1">
               <ol>
-                <li>Help all people in the world to become equal in terms of cybersecurity knowledge</li>
-                <li>Worldwide free trainings offering</li>
+                <li>By partnering with Cylander, you'll be supporting a meaningful mission to democratize cybersecurity knowledge for everyone, regardless of their background.</li>
+                <li>Aligning with our noble cause demonstrates your organization's commitment to fostering a secure digital world and promoting trust in transformative technologies.</li>
+                <li>Embrace our mission to make cybersecurity a fundamental right, and together, we'll create a safer digital environment for all.</li>
               </ol>
             </div>
-            <div class="tabs-item text fade" id="corpo-level">
+            <div class="tabs-item text fade" id="2">
               <ol>
-                <li>Promote a worldwide Cybersecurity knowledge egality</li>
-                <li>Partner’s logo and COMPANY name will be published via our website!</li>
+                <li>As a Cylander partner, you'll play a vital role in building a society equipped to handle the ever-changing cybersecurity landscape and emerging threats.</li>
+                <li>By supporting our initiative, you'll empower individuals and organizations with the knowledge and resources needed to mitigate cyber risks and create a more secure digital future.</li>
+                <li>Contributing to a resilient society demonstrates your dedication to advancing cybersecurity education, fostering a safer online world for everyone.</li>
               </ol>
             </div>
-            <div class="tabs-item text fade" id="certif">
-              <p><strong>Via a certification process, reduce recruitment period by 50%.</strong></p>
-              <p>Once certified, the trained experts will form part of a "common pool" of qualified resources which any organisation will draw upon. Seeing high involvement from the open-source community and adding new materials and learning profiles/paths. Becoming the go-to-place for learning about AppSec security in the AppSec community.</p>
-              <p>Create an inflow of new security testers inside partners’ companies to offer them a learning path to become a security professional in secure development, pentesting and ops-infra.</p>
+            <div class="tabs-item text fade" id="3">
+              <ol>
+                <li>Partnering with Cylander showcases your organization's commitment to making a positive impact on society by actively supporting a safer digital environment for all.</li>
+                <li>By demonstrating corporate responsibility, you'll strengthen your brand's reputation as an ethical, forward-thinking company that values the security of its customers and stakeholders.</li>
+                <li>Embracing our mission not only helps improve global cybersecurity but also reflects your organization's dedication to social responsibility and the well-being of the digital community.</li>
+              </ol>
+            </div>
+            <div class="tabs-item text fade" id="4">
+              <ol>
+                <li>By partnering with Cylander, your brand will benefit from increased exposure and visibility, aligning itself with a cutting-edge cybersecurity initiative.</li>
+                <li>Associating your brand with our mission will distinguish your organization in the market, attracting customers who value trust, security, and innovation.</li>
+                <li>Leverage our partnership to elevate your brand's presence, showcasing your commitment to cybersecurity education and fostering a safer digital world for all.</li>
+              </ol>
+            </div>
+            <div class="tabs-item text fade" id="5">
+              <ol>
+                <li>As a Cylander partner, you'll gain access to a community of like-minded organizations and individuals, providing opportunities for networking with industry leaders in cybersecurity.</li>
+                <li>Collaborate on groundbreaking initiatives, share knowledge, and drive change within the cybersecurity landscape by connecting with experts and visionaries in the field.</li>
+                <li>Seize the opportunity to establish valuable relationships, exchange insights, and work together with fellow partners to build a more secure and resilient digital ecosystem.</li>
+              </ol>
             </div>
           </div>
         </div>
