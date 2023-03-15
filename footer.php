@@ -14,9 +14,7 @@
         <div class="menu-main-menu-container">
           <ul id="footer-menu" class="footer-menu col-one">
             <li class="menu-item"><a href="/#our-mission">Our mission</a></li>
-            <li class="menu-item"><a href="/#educate">Educate</a></li>
-            <li class="menu-item"><a href="/#inform">Inform</a></li>
-            <li class="menu-item"><a href="/#train">Train</a></li>
+            <li class="menu-item"><a href="/#educate">Actions</a></li>
           </ul>
 
           <ul id="footer-menu" class="footer-menu col-two">
@@ -54,7 +52,7 @@
             <div class="menu">
               <ul>
                 <li class=""><a href="/privacy.php">Privacy Policy</a></li>
-                <li class=""><a href="/single.php">Cookie policy</a></li>
+                <li class=""><a href="/cookie.php">Cookie policy</a></li>
               </ul>
             </div>
           </div>
@@ -102,7 +100,7 @@
               <span class="span-gdpr">
                 <label>
                   <input type="checkbox" name="gdpr" value="1" aria-invalid="false">
-                  <span class="label label-gdpr">I have read and accept <a href="#" target="_blank">Terms of use</a> and <a href="#" target="_blank">Privacy policy</a> and also agree to be contacted.</span>
+                  <span class="label label-gdpr">I have read and accept the <a href="cookie.php" target="_blank">Cookie Statement</a> and <a href="privacy.php" target="_blank">Privacy policy</a> and also agree to be contacted.</span>
                 </label>
               </span>
             </div>

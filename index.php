@@ -165,7 +165,7 @@
             <li class="logo">
               <a href="https://secureby.design/auth/login" target="_blank">
                 <figure>
-                  <img class="" src="img/partner/logo-NullPointer.png" alt="logo Null Pointer">
+                  <img class="" src="img/partner/logo-owasp.png" alt="logo OWASP">
                 </figure>
               </a>
             </li>
