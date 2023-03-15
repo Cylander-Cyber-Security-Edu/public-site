@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$lastName = trim($_POST["last-name"]);
 	$email = trim($_POST["email"]);
 	$phone = trim($_POST["phone"]);
-	$company = trim($_POST["company"]);
 	$message = trim($_POST["your-message"]);
 	$gdpr = isset($_POST["gdpr"]) ? true : false;
 

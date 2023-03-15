@@ -100,7 +100,6 @@
               <div class="half"><label>Phone *</label><span class="" data-name="phone"><input type="text" name="phone" value="" size="40" class="" aria-required="true" aria-invalid="false"></span></div>
             </div>
 
-            <div class="full"><label>Company *</label><span class="" data-name="company"><input type="text" name="company" value="" size="40" class="" aria-required="true" aria-invalid="false"></span></div>
             <div class="full"><label>Message *</label><span class="" data-name="your-message"><textarea name="your-message" cols="40" rows="4" class="" aria-invalid="false"></textarea></span></div>
 
             <div class="full gdpr">
@@ -112,7 +111,7 @@
               </span>
             </div>
 
-            <div class="submit-wrapper"><input type="submit" value="Send message" class="" disabled=""></div>
+            <div class="submit-wrapper"><input type="submit" value="Send message" class=""  disabled=""></div>
           </form>
         </div>
       </div>
