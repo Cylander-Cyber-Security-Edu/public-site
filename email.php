@@ -19,7 +19,16 @@ function sendEmail($to, $subject, $message) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
-	// Usage example
+	// Get the form data
+	$firstName = trim($_POST["first-name"]);
+	$lastName = trim($_POST["last-name"]);
+	$email = trim($_POST["email"]);
+	$phone = trim($_POST["phone"]);
+	$company = trim($_POST["company"]);
+	$message = trim($_POST["your-message"]);
+	$gdpr = isset($_POST["gdpr"]) ? true : false;
+
+	// email
 	$to = 'cylander@ing.com';
 	$subject = "New partnership inquiry from: " . $firstName . " " . $lastName;
 	$body = "First Name: " . $firstName . "\n";

@@ -91,7 +91,7 @@
           <form action="/email.php" method="post" class="" novalidate="novalidate" data-status="init">
 
             <div class="wrapper-half">
-              <div class="half"><label>First name *</label><span class="" data-name="first-name"><input type="text" name="fist-name" value="" size="40" class="" aria-required="true" aria-invalid="false"></span></div>
+              <div class="half"><label>First name *</label><span class="" data-name="first-name"><input type="text" name="first-name" value="" size="40" class="" aria-required="true" aria-invalid="false"></span></div>
               <div class="half"><label>Last name *</label><span class="" data-name="last-name"><input type="text" name="last-name" value="" size="40" class="" aria-required="true" aria-invalid="false"></span></div>
             </div>
 
@@ -112,7 +112,7 @@
               </span>
             </div>
 
-            <div class="submit-wrapper"><input type="submit" value="Send message" class=""></div>
+            <div class="submit-wrapper"><input type="submit" value="Send message" class="" disabled=""></div>
           </form>
         </div>
       </div>
