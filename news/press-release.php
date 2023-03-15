@@ -2,7 +2,7 @@
 	<a href="/news/full-press-release.php" title="Read this article">
 		<header class="post-header">
 			<figure class="u-photo">
-				<img src="/news/img/press-release" alt="cylander img defaut">
+				<img src="/news/img/press-release.jpg" alt="cylander img defaut">
 			</figure>
 		</header>
 
