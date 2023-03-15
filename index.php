@@ -255,7 +255,7 @@
                   </span>
                 </div>
 
-                <div class="submit-wrapper"><input type="submit" value="Send message" class="" disabled=""></div>
+                <div class="submit-wrapper"><input type="submit" value="Send message" class=""></div>
               </form>
             </div>
           </div>

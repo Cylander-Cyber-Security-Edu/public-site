@@ -112,7 +112,7 @@
               </span>
             </div>
 
-            <div class="submit-wrapper"><input type="submit" value="Send message" class="" disabled=""></div>
+            <div class="submit-wrapper"><input type="submit" value="Send message" class=""></div>
           </form>
         </div>
       </div>
@@ -132,6 +132,38 @@
 </div>
 
 <script src="/assets/js/main.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#form form');
+    const firstName = form.elements['first-name'];
+    const lastName = form.elements['last-name'];
+    const email = form.elements['email'];
+    const phone = form.elements['phone'];
+    const message = form.elements['your-message'];
+    const gdpr = form.elements['gdpr'];
+    const submitButton = form.querySelector('input[type="submit"]');
+
+    const enableSubmitButton = function() {
+      submitButton.disabled = !(
+        firstName.value.trim() &&
+        lastName.value.trim() &&
+        email.value.trim() &&
+        phone.value.trim() &&
+        message.value.trim() &&
+        gdpr.checked
+      );
+    };
+
+    firstName.addEventListener('input', enableSubmitButton);
+    lastName.addEventListener('input', enableSubmitButton);
+    email.addEventListener('input', enableSubmitButton);
+    phone.addEventListener('input', enableSubmitButton);
+    message.addEventListener('input', enableSubmitButton);
+    gdpr.addEventListener('change', enableSubmitButton);
+
+    enableSubmitButton(); // initial check
+  });
+</script>
 </div> <!-- #page -->
 </body>
 
