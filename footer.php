@@ -88,7 +88,7 @@
         </div>
 
         <div role="form" class="form" id="form" lang="en-US" dir="ltr">
-          <form action="" method="post" class="" novalidate="novalidate" data-status="init">
+          <form action="/email.php" method="post" class="" novalidate="novalidate" data-status="init">
 
             <div class="wrapper-half">
               <div class="half"><label>First name *</label><span class="" data-name="first-name"><input type="text" name="fist-name" value="" size="40" class="" aria-required="true" aria-invalid="false"></span></div>
