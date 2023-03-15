@@ -38,7 +38,7 @@
         <div class="social-container">
           <div class="menu-social-menu-container">
             <ul id="menu-social-menu" class="gbl-social-menu">
-              <li id="" class="linkedin"><a href="#" target="_blank">Linkedin</a></li>
+              <li id="" class="linkedin"><a href="https://linkedin.com/company/cylander" target="_blank">Linkedin</a></li>
             </ul>
           </div>
         </div>

@@ -33,15 +33,13 @@
 						<div class="share-name">Share this news : </div>
 						<ul class="social__link-list">
 							<li class="facebook">
-								<a target="_blank" href="#">facebook</a>
+								<a target="_blank" href="https://facebook.com">facebook</a>
 							</li>
 							<li class="twitter">
-								<a target="_blank" href="#">twitter</a>
+								<a target="_blank" href="https://twitter.com">twitter</a>
 							</li>
 							<li class="linkedin">
-								<a target="_blank" href="#">linkedin</a>
-							</li>
-							<li class="email"><a href="#">email</a>
+								<a target="_blank" href="https://linkedin.com/company/cylander">linkedin</a>
 							</li>
 						</ul>
 					</div>
