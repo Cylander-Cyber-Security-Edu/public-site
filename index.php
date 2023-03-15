@@ -230,7 +230,8 @@
           <div class="inner-content">
             <div class="text">
               <h4 class="h2">Contact us !</h4>
-              <p>Three categories of Partners are proposed: Premium/Silver/Gold. Thanks to contact us to obtain additional information.
+              <p>Become a Partner with Cylander: Join the Revolution in Cybersecurity Education</p>
+              <p>Are you as passionate about cybersecurity as we are? At Cylander, we're on a mission to create a world where comprehensive cybersecurity knowledge and resources are accessible to all, and we need your help to make this a reality. By becoming a partner, you'll be joining a movement that is dedicated to empowering individuals and organizations in the fight against cyber threats.</p>
 
             <div role="form" class="form" id="form" lang="en-US" dir="ltr">
               <form action="/email.php" method="post" class="" novalidate="novalidate" data-status="init">
