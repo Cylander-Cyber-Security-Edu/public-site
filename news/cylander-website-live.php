@@ -2,7 +2,7 @@
 	<a href="/news/full-cylander-website-live.php" title="Read this article">
 		<header class="post-header">
 			<figure class="u-photo">
-				<img src="img/defaut.jpg" alt="cylander img defaut">
+				<img src="/news/img/cylander-site.png" alt="cylander img defaut">
 			</figure>
 		</header>
 

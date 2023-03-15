@@ -10,7 +10,7 @@
 					<div class="breadcrumb"><a href="/index.php">Home</a> <a href="/all-news.php">News</a> <span>Cylander website live</span></div>
 					<header class="page-header">
 						<figure class="u-photo">
-							<img src="/news/img/defaut.jpg" alt="cylander img defaut">
+							<img src="/news/img/cylander-site.png" alt="cylander img defaut">
 						</figure>
 					</header><!-- .page-header -->
 				</div><!-- .inner-hero -->
