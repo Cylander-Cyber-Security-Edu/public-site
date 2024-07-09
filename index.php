@@ -9,7 +9,7 @@
       <div class="section-wrapper">
         <header class="page-header">
           <div class="page-content">
-            <h1>Cylander is a <strong>non profit association</strong> dedicated to provide and produce free <span>Cyber Security Knowledge</span></h1>
+            <h1>Cylander is a <strong>non profit association</strong> dedicated to provide free access to <span>Cyber Security Knowledge</span></h1>
           </div><!-- .page-content -->
         </header>
       </div>
@@ -65,15 +65,14 @@
 	          </div>
             <div class="row two" id="inform">
               <h3>Relevance</h3>
-              <p>Second, we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. For example, we may create education materials that target small businesses or individuals, depending on the needs of our target audience.</p>
+              <p>Second, we focus on creating education materials that are relevant to the real-world challenges that individuals and organizations face in their daily lives. This means staying up-to-date on the latest cyber threats and trends, and tailoring our materials to address the specific needs of different audiences. </p>
             </div>
             <div class="row three" id="train">
               <h3>Interactivity</h3>
-              <p>Third, we believe in the power of interactivity to engage learners and help them retain information. We aim to create education materials that allow learners to actively engage with the content, whether through quizzes, simulations, or other interactive elements. By incorporating interactivity into our education materials, we can help learners develop practical cybersecurity skills and build confidence in their ability to protect themselves against cyber threats.
+              <p>Third, we recognize the importance of engaging with local communities to ensure effective learning experiences. We actively collaborate with local people to identify and train skilled trainers who can support students in their educational journey. By working closely with these communities, we ensure that there is always a knowledgeable and approachable trainer available to guide and assist learners.
 	            <ul>
-                <li>To create our education materials, we work with a team of cybersecurity experts and educators who bring a diverse range of perspectives and experiences to the table. We also engage with stakeholders from different sectors, such as government agencies, non-profits, and private companies, to ensure that our education materials reflect the latest best practices and are relevant to the needs of different audiences.</li>
+                <li>We partner with a team of cybersecurity experts and educators who bring diverse perspectives and experiences. Additionally, we collaborate with stakeholders from various sectors, including government agencies, non-profits, and private companies. This approach ensures that our materials reflect the latest best practices and are tailored to meet the needs of different audiences. Through this community-focused strategy, we can help learners develop practical cybersecurity skills and build confidence in their ability to protect themselves against cyber threats.</li>
               </ul>
-              <a href="https://secureby.design/auth/login" target="_blank" class="readmore">visit the training platform</a>
             </div>
           </div>
         </div>
@@ -97,7 +96,7 @@
           <div class="inner-content text">
             <h3>The future Short term</h3>
             <div class="col-text">
-              <p>Cylander aims to create widespread awareness of our free cybersecurity education materials and gather feedback on the learning profiles and curricula for our three profiles. We will work to engage with the open-source community and continue to develop new materials. By fostering a culture of cybersecurity awareness and education, we can help individuals and organizations build the knowledge and skills they need to protect themselves against cyber threats.</p>
+              <p>Cylander aims to create widespread awareness of our free cybersecurity education materials and gather feedback on the learning profiles and curricula for our three profiles. By fostering a culture of cybersecurity awareness and education, we can help individuals and organizations build the knowledge and skills they need to protect themselves against cyber threats.</p>
               <p>Overall, our short-term objectives align with our mission of promoting free cybersecurity knowledge and our vision of a safer and more secure digital environment for all. By pursuing these objectives, we can make a meaningful impact on the cybersecurity landscape and help individuals and organizations build resilience against cyber threats.</p>
             </div>
           </div>
