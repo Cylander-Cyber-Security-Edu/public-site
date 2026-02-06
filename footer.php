@@ -47,7 +47,7 @@
       <!-- #colophon -->
       <div id="colophon" role="contentinfo">
         <div class="credits-wrapper">
-          <p class="credit">©2023 Cylander</p>
+          <p class="credit">©2026 Cylander</p>
           <div class="gdpr-menu">
             <div class="menu">
               <ul>
