@@ -68,7 +68,7 @@
             <div class="row three" id="train">
               <h3>Certify and connect</h3>
               <p>At the end of the programme, students sit for the HTB Certified Penetration Testing Specialist examination, a rigorous, industry-recognised credential respected by employers worldwide. Graduates leave the programme not just with a certificate, but with twelve months of practical experience and a professional foundation that makes them immediately valuable to any security team. Through our partner network, certified graduates gain access to job interview opportunities with companies looking to hire skilled cybersecurity talent.</p>
-              <a href="https://secureby.design/auth/login" target="_blank" class="readmore">visit the training platform</a>
+              <a href="https://www.hackthebox.com/hacker" target="_blank" class="readmore">visit the HTB training platform</a>
             </div>
           </div>
         </div>
@@ -186,9 +186,9 @@
               </a>
             </li>
             <li class="logo">
-              <a href="https://secureby.design/auth/login" target="_blank">
+              <a href="https://www.hackthebox.com/hacker" target="_blank">
                 <figure>
-                  <img class="" src="img/partner/logo-owasp.png" alt="logo OWASP">
+                  <img class="" src="img/partner/Hack_The_Box_Logo_1.png" alt="logo HTB">
                 </figure>
               </a>
             </li>
