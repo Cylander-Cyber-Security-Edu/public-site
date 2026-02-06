@@ -18,6 +18,11 @@
 			<div class="page-body">
 				<div class="wrapper-page-body">
 					<div class="wrapper-grid card-wrapper">
+						<?php include "news/nairobi-course-2026.php" ?>
+						<?php include "news/course-graduates.php" ?>
+						<?php include "news/digifair-event.php" ?>
+						<?php include "news/cybersecurity-course-kickoff.php" ?>
+						<?php include "news/cybersecurity-course.php" ?>
 						<?php include "news/cylander-website-live.php" ?>
 						<?php include "news/press-release.php" ?>
 						<?php include "news/content-news.php" ?>
